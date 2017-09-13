@@ -1,0 +1,914 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		063D2CEC579BFC1EC7C386F555DF1FA8 /* SKTMLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A3EB605F086EF87C282FDB4D8BCB12 /* SKTMLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C2878FFF7CF1C7E85D19F478FB9DF29 /* TMXTileLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C027BD0E3E3BFECB31B86E7137C52EE /* TMXTileLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D11E6942F46F518F753C5465B410F07 /* SKMapRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ECD437BDA420D068F3C7AD3C599B3D /* SKMapRenderer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F47F0651C3277BF25740A382C1CC0FB /* SKTMTileLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D669936A3A828B132DA83407E9A473 /* SKTMTileLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F4AB6FEF6589A9D86A276A474FFC53A /* SKTMObjectGroupLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D6DADAF7B5B6C3BC73A44F460B35462A /* SKTMObjectGroupLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		136724B0ED209352CE8AD57C67A0F50C /* Pods-FWGame-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BF3E11C71B405264DFF484E97BA286 /* Pods-FWGame-dummy.m */; };
+		13ADFD5742ACF90D32304BAD69186CB2 /* TMXObject.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6484ED0B4567422A230904EBD12525 /* TMXObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1775938478FD3E66321F24304E4314E3 /* TMXTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C636FAC4C4339B9A5720B1608C981D8 /* TMXTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		182586CEF93AE27CD95B32A32246E53A /* OrthogonalRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = DB05D41C09FC2406C1376A6AA89E237D /* OrthogonalRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		198EDA67671DC916162CA7E90586048A /* SKTMMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2171F6200DB61351DB9B7840C725C3 /* SKTMMapLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1E5BD0ED0D42B066CF95C509CDB41CF7 /* SKZipUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 82147F5376A88CE1AC836A03229CAE6A /* SKZipUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24BD3CCD1C6B57968A977E638C32EBC4 /* TMXObjectGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 887770089F18F031D97FDC194DF8784A /* TMXObjectGroupNode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		269439EC22A1590C5D273931522040D1 /* SKTMTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 53032F82E637F2E0C3456BE7D7E981D0 /* SKTMTileLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		26B17966CE69AB48020579501E0C5033 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A81524E2E29C20871BF7950AD3B1DC47 /* Foundation.framework */; };
+		28BEEE0F31217849A10BAD68AD2269B7 /* TMXObjectGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = D100F1F1F5377A026941C1343762F7D4 /* TMXObjectGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2912F29EBB0D87DC65E46CF91BEDFF12 /* HexagonalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E6FEE6EB16FD737840A866C0C7614 /* HexagonalRenderer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2B8C0E68C7F9B6F653A107E061AEA83E /* SKTMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC0B3733BFE19EB192CC363C3FB3E57 /* SKTMNode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		30156A77ED61D5D6F452B6AAFAD58FFB /* WBMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = F49643AFEFE1730FF3695391C2CCACFC /* WBMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BC6259FAB320C486F16A8DAC8279BA /* WBImage+WBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7293125C3160756D9B623A729856D4FC /* WBImage+WBUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32F45BA9DD5582AB2E9D6883B13D6F2E /* SKTMImageLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F8EFC2E9652FB53AAD5BB76991B4A13C /* SKTMImageLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		376EE680B10698308B1DA8623E630190 /* OrthogonalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB5E9BF4814405567EF272461B3BB1A /* OrthogonalRenderer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3CF061C158C043E1FFD77B7BE98B9E87 /* SKTMTileNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 031E7A5C7E3C1742B4578492334A927A /* SKTMTileNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F69F2CC91BC7FA01FC3B06E0A8E2C69 /* IsometricRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D27F679E1494FE3C9559AAEDBF9DCED /* IsometricRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4107782E3924F24AC6779AB5EF0E65C7 /* TMXImageLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = CF9277060AF6D5FC41009EBA4973B3FB /* TMXImageLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		439CC5DECB9B40CCE396BC11EC64C14F /* SKTMObjectGroupShape.h in Headers */ = {isa = PBXBuildFile; fileRef = 26A974590229134ABE1B8F7DAFD180FD /* SKTMObjectGroupShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45EC74CE8949FDDA574FCB388D082FDE /* SKTiledMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6963E856B623B848C0E4D9429011E /* SKTiledMap-dummy.m */; };
+		5305D3035957F008DC83B870A5E12026 /* SKTexture+WBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B85E613F5690C3ABE56B8869187EFB7A /* SKTexture+WBUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5F65D8C3348AC2D1BB6FFC9428CDF6E9 /* TMXObjectGroupNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 753DF7902BD61E8713B13D58F9A94018 /* TMXObjectGroupNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FACB319CD716CC6BB9212EF0960FE3D /* SKTMObjectGroupLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2705B52FD4EAD9EBE7C7D46A4B9CAD75 /* SKTMObjectGroupLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		650C960077D00EE25D2D8E764FC0C2B9 /* TMXTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F01E4E72960ED0E64EFFF3AC8DEE4F /* TMXTileset.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		67C7EB69D98DCAC95355902DFFB5F385 /* StaggeredRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ECAD63C1CC8EE1C47D9F93FD18934F5 /* StaggeredRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		684CFC9E1CEFFC9E444CF6CA8E4B74A1 /* SKTMImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A19126FB21188F3F6425FE73C1F1E3AE /* SKTMImageLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		68D278FDA67EC0387089C457F17A5925 /* TMXTerrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E5A75923490801BAFC26B262872464 /* TMXTerrain.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6A2B8D8BC28B776BA408898EB1279463 /* SKTMObjectGroupTile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3119EF535D73BC2390BA68A018A9F5C9 /* SKTMObjectGroupTile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ED9FDC2D39708934B6E7A3CB60C8FAE /* SKColor+TMXColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = D880993DF2B0C60F2668345C2296203D /* SKColor+TMXColorWithHex.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		71515001F3B1B801F027112BDAE329A3 /* TMXTerrain.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF10E929B3F62BB30485DC42A717EB3 /* TMXTerrain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7190FEBBFA57769125EE7467521B982F /* SKTMBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 737EF534E20995677C4B29FBB8B2FB42 /* SKTMBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71AB25E18DC8970DD79E910A5278EF69 /* IsometricRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC0C54447F739FDBD225B03A0DDAC9 /* IsometricRenderer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7301A555D0E7EADD383108F255DBD65E /* HexagonalRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 33435B15A6052BCFDBEAE32C1530E948 /* HexagonalRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		730D44139B452F4F899FDAC6A26B9955 /* WBMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A46D2EBE06B3D441E2F951305B3B1F /* WBMatrix.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		779613493ABC9F799B553EB0FF0A3F54 /* TMXMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5152FE4864C8ACFE03AF7B924BC1283E /* TMXMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B22EDC4D271CB337D845E7C3EDEB882 /* TMXTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BA1D94F0DAEB6B82CCF2C4680044DB /* TMXTileLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		875DB565261C378664EA24E1DC5D484B /* SKZipUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 92665184940E53EB962791DEFF321D65 /* SKZipUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		898B3BEFA7BF3F43B81016D7C6BF5A70 /* TMXTileset.h in Headers */ = {isa = PBXBuildFile; fileRef = 0793924F64EBD4B08EA33899BBEFA28B /* TMXTileset.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B95E189335D094B4169EF3DB859F51E /* TMXImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEFBA3E16C458408E4FB3C324B37F4E /* TMXImageLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9D566B2FDE2A2B66E46D638182323158 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6839F56E8E85784168265A97D85E84D2 /* UIKit.framework */; };
+		9ED37DE29983D1FC99445B8D38291047 /* SKTMMapLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0072F58E4B1AE15FE44EDD1FE83EE73B /* SKTMMapLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FAF30E487C3138B6A1833D667C9B623 /* SKTMObjectGroupShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 793E5757DC25861EB4D0CCDB068E652E /* SKTMObjectGroupShape.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A3344DC16CDCEA26A5766F623CE7B50F /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 58DBE314B2D2C48B48F1386A276947F5 /* ONOXMLDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE0FC781A4EDFD06ECB6EC8AE7A852AA /* StaggeredRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E8DB6630F230D9A2E69BC11FE624AD /* StaggeredRenderer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AE9DEF91C75C4CF7F2D8ECA148260D64 /* SKTMObjectGroupTile.m in Sources */ = {isa = PBXBuildFile; fileRef = D6DD872F93FFC9D67782DB201418A0C0 /* SKTMObjectGroupTile.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BC4787FCFCFFDBD574820E6102C07C68 /* TMXTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDBE857437725DF1FA91DB1FE4B1FE /* TMXTile.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BDA70607AC971AF5DC89877CE2B90F4B /* TMXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A5544161A09A24E8CE9D077AD338DC3A /* TMXObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C22EB9C8780E5C290797B0719E67C828 /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6FEEF56923E9F87B8087E4E2618196 /* ONOXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C563681E3EE74247D5EE49F1A8998FAA /* TMXMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD07E90F1AF75FC3A233E0FBBB58334 /* TMXMap.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C67442C39E6D6B884675ED2A49612BE7 /* SKNode+WBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF744A76D7D181EFD78E0A425B6A1AFD /* SKNode+WBUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C81651F6E2EC315D39BF1DC252F0CE12 /* SKNode+WBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C15EAF102C2412D7F60229B5D775C37 /* SKNode+WBUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE1D2B6F7DAD161D5F6C82639BB153BC /* SKColor+TMXColorWithHex.h in Headers */ = {isa = PBXBuildFile; fileRef = 26201BA613A71B81300005F6E7921646 /* SKColor+TMXColorWithHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D07D88142AFD37E62480842A7897CF44 /* TMXTile.h in Headers */ = {isa = PBXBuildFile; fileRef = 5232842891A2E7F7CAA9E395BABAC774 /* TMXTile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D695753895CD2CB886FD7CA1F23A0B41 /* SKTMLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C72C99B9B904C8AFDECDD7BC9A168C /* SKTMLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D8484A9A1EE66F88421EB4D4A1191637 /* TMXObjectGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F98BDB980A81A40D58145C5A70804693 /* TMXObjectGroup.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D8A1776E19032ED9F7AF25B2063804D3 /* Ono-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E77AF6C55AAA4525552FE990C6423031 /* Ono-dummy.m */; };
+		DD2CECC27F16B925D08A5E28385814FF /* TMXBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA1E5B554070CD3E4604367B06C89A8 /* TMXBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE60576F4AF8342D0493EF6FF3093951 /* SKMapRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D15FE9E9D240374319672317EAD2E60 /* SKMapRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0C647425D02CB1CA6A5B730EAA9E207 /* SKTexture+WBUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E55AAF2B3DB0CCF75DC73D16C009A0F /* SKTexture+WBUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3A831CD21E48A64FF4BD5B63FEC4E07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A81524E2E29C20871BF7950AD3B1DC47 /* Foundation.framework */; };
+		E4FB1B69A0340B8B0E17D3825A4158B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A81524E2E29C20871BF7950AD3B1DC47 /* Foundation.framework */; };
+		E89370A4D5DA4142E155785EE6F96782 /* WBImage+WBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE0D28E13448290408DCEA1593BCA74 /* WBImage+WBUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EC237D29363C3944F1F5392E3E463962 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E49F964674D9FB3A852C39D314C178 /* SpriteKit.framework */; };
+		EFA7C54F37B055CC3F329F3044582781 /* SKTMTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 195FFCD9B0A5912650C6844C6CAC779D /* SKTMTileNode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FC30D8624D83CC70936EFE8A590F2483 /* SKTMNode.h in Headers */ = {isa = PBXBuildFile; fileRef = F91F0B10D40C71E0FC2A0C6A9C6DC1B0 /* SKTMNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE09754E7D119F19EA3700DC80C57047 /* SKTiledMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 17447227BD9F39A0A3101699C6EBC160 /* SKTiledMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF3C5747FF0889D5E4A86C608565163A /* Ono.h in Headers */ = {isa = PBXBuildFile; fileRef = 849EAE2896884B52C8D2C9D4A2740849 /* Ono.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FA30DA9B05FCD0E7E71E8443DB609A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FF021C548DD7101989BD5650683DC9E;
+			remoteInfo = Ono;
+		};
+		4EE59E6A4A30FE948743639C10979A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FF021C548DD7101989BD5650683DC9E;
+			remoteInfo = Ono;
+		};
+		6A87856F706AF685CFA4E98F7184542F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B019E0264BD0229DD1FF963E50D4577A;
+			remoteInfo = SKTiledMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0072F58E4B1AE15FE44EDD1FE83EE73B /* SKTMMapLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMMapLayer.h; path = Framework/SpriteKitNode/SKTMMapLayer.h; sourceTree = "<group>"; };
+		031E7A5C7E3C1742B4578492334A927A /* SKTMTileNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMTileNode.h; path = Framework/SpriteKitNode/SKTMTileNode.h; sourceTree = "<group>"; };
+		0793924F64EBD4B08EA33899BBEFA28B /* TMXTileset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXTileset.h; path = Framework/Model/TMXTileset.h; sourceTree = "<group>"; };
+		0C027BD0E3E3BFECB31B86E7137C52EE /* TMXTileLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXTileLayer.h; path = Framework/Model/TMXTileLayer.h; sourceTree = "<group>"; };
+		0CE0D28E13448290408DCEA1593BCA74 /* WBImage+WBUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WBImage+WBUtils.m"; path = "Framework/External/WBImage+WBUtils.m"; sourceTree = "<group>"; };
+		17447227BD9F39A0A3101699C6EBC160 /* SKTiledMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTiledMap.h; path = Framework/SKTiledMap.h; sourceTree = "<group>"; };
+		195FFCD9B0A5912650C6844C6CAC779D /* SKTMTileNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKTMTileNode.m; path = Framework/SpriteKitNode/SKTMTileNode.m; sourceTree = "<group>"; };
+		1B6E6FEE6EB16FD737840A866C0C7614 /* HexagonalRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HexagonalRenderer.m; path = Framework/Classes/HexagonalRenderer.m; sourceTree = "<group>"; };
+		26201BA613A71B81300005F6E7921646 /* SKColor+TMXColorWithHex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKColor+TMXColorWithHex.h"; path = "Framework/External/SKColor+TMXColorWithHex.h"; sourceTree = "<group>"; };
+		26A974590229134ABE1B8F7DAFD180FD /* SKTMObjectGroupShape.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMObjectGroupShape.h; path = Framework/SpriteKitNode/SKTMObjectGroupShape.h; sourceTree = "<group>"; };
+		26C72C99B9B904C8AFDECDD7BC9A168C /* SKTMLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKTMLayer.m; path = Framework/SpriteKitNode/SKTMLayer.m; sourceTree = "<group>"; };
+		2705B52FD4EAD9EBE7C7D46A4B9CAD75 /* SKTMObjectGroupLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKTMObjectGroupLayer.m; path = Framework/SpriteKitNode/SKTMObjectGroupLayer.m; sourceTree = "<group>"; };
+		2DA1E5B554070CD3E4604367B06C89A8 /* TMXBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXBase.h; path = Framework/Model/TMXBase.h; sourceTree = "<group>"; };
+		2E55AAF2B3DB0CCF75DC73D16C009A0F /* SKTexture+WBUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKTexture+WBUtils.h"; path = "Framework/External/SKTexture+WBUtils.h"; sourceTree = "<group>"; };
+		3119EF535D73BC2390BA68A018A9F5C9 /* SKTMObjectGroupTile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMObjectGroupTile.h; path = Framework/SpriteKitNode/SKTMObjectGroupTile.h; sourceTree = "<group>"; };
+		33435B15A6052BCFDBEAE32C1530E948 /* HexagonalRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HexagonalRenderer.h; path = Framework/Classes/HexagonalRenderer.h; sourceTree = "<group>"; };
+		36C0058A36738DF851BE151A7623A3D3 /* Pods-FWGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FWGame.debug.xcconfig"; sourceTree = "<group>"; };
+		37E8DB6630F230D9A2E69BC11FE624AD /* StaggeredRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = StaggeredRenderer.m; path = Framework/Classes/StaggeredRenderer.m; sourceTree = "<group>"; };
+		3C636FAC4C4339B9A5720B1608C981D8 /* TMXTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXTypes.h; path = Framework/Model/TMXTypes.h; sourceTree = "<group>"; };
+		3D27F679E1494FE3C9559AAEDBF9DCED /* IsometricRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IsometricRenderer.h; path = Framework/Classes/IsometricRenderer.h; sourceTree = "<group>"; };
+		488CC3C5E31C7ADDBAF6908BF72AAF8F /* Pods-FWGame-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FWGame-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49E5A75923490801BAFC26B262872464 /* TMXTerrain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMXTerrain.m; path = Framework/Model/TMXTerrain.m; sourceTree = "<group>"; };
+		49ECD437BDA420D068F3C7AD3C599B3D /* SKMapRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKMapRenderer.m; path = Framework/Classes/SKMapRenderer.m; sourceTree = "<group>"; };
+		4D15FE9E9D240374319672317EAD2E60 /* SKMapRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKMapRenderer.h; path = Framework/Classes/SKMapRenderer.h; sourceTree = "<group>"; };
+		4E7897E5E9528DBB7E74896FA184681A /* SKTiledMap-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKTiledMap-prefix.pch"; sourceTree = "<group>"; };
+		50A3EB605F086EF87C282FDB4D8BCB12 /* SKTMLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMLayer.h; path = Framework/SpriteKitNode/SKTMLayer.h; sourceTree = "<group>"; };
+		50A46D2EBE06B3D441E2F951305B3B1F /* WBMatrix.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WBMatrix.m; path = Framework/External/WBMatrix.m; sourceTree = "<group>"; };
+		5152FE4864C8ACFE03AF7B924BC1283E /* TMXMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXMap.h; path = Framework/Model/TMXMap.h; sourceTree = "<group>"; };
+		5232842891A2E7F7CAA9E395BABAC774 /* TMXTile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXTile.h; path = Framework/Model/TMXTile.h; sourceTree = "<group>"; };
+		53032F82E637F2E0C3456BE7D7E981D0 /* SKTMTileLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKTMTileLayer.m; path = Framework/SpriteKitNode/SKTMTileLayer.m; sourceTree = "<group>"; };
+		58DBE314B2D2C48B48F1386A276947F5 /* ONOXMLDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = Source/ONOXMLDocument.h; sourceTree = "<group>"; };
+		5AD07E90F1AF75FC3A233E0FBBB58334 /* TMXMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMXMap.m; path = Framework/Model/TMXMap.m; sourceTree = "<group>"; };
+		5AE6963E856B623B848C0E4D9429011E /* SKTiledMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SKTiledMap-dummy.m"; sourceTree = "<group>"; };
+		5C15EAF102C2412D7F60229B5D775C37 /* SKNode+WBUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SKNode+WBUtils.h"; path = "Framework/External/SKNode+WBUtils.h"; sourceTree = "<group>"; };
+		5C6FEEF56923E9F87B8087E4E2618196 /* ONOXMLDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = Source/ONOXMLDocument.m; sourceTree = "<group>"; };
+		6839F56E8E85784168265A97D85E84D2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		68D669936A3A828B132DA83407E9A473 /* SKTMTileLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMTileLayer.h; path = Framework/SpriteKitNode/SKTMTileLayer.h; sourceTree = "<group>"; };
+		6ECAD63C1CC8EE1C47D9F93FD18934F5 /* StaggeredRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StaggeredRenderer.h; path = Framework/Classes/StaggeredRenderer.h; sourceTree = "<group>"; };
+		7293125C3160756D9B623A729856D4FC /* WBImage+WBUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WBImage+WBUtils.h"; path = "Framework/External/WBImage+WBUtils.h"; sourceTree = "<group>"; };
+		7319D03B78CE426505334B251FA4C307 /* libOno.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libOno.a; path = libOno.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		737EF534E20995677C4B29FBB8B2FB42 /* SKTMBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMBase.h; path = Framework/SpriteKitNode/SKTMBase.h; sourceTree = "<group>"; };
+		753DF7902BD61E8713B13D58F9A94018 /* TMXObjectGroupNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXObjectGroupNode.h; path = Framework/Model/TMXObjectGroupNode.h; sourceTree = "<group>"; };
+		793E5757DC25861EB4D0CCDB068E652E /* SKTMObjectGroupShape.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKTMObjectGroupShape.m; path = Framework/SpriteKitNode/SKTMObjectGroupShape.m; sourceTree = "<group>"; };
+		7FDDBE857437725DF1FA91DB1FE4B1FE /* TMXTile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMXTile.m; path = Framework/Model/TMXTile.m; sourceTree = "<group>"; };
+		81E49F964674D9FB3A852C39D314C178 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
+		82147F5376A88CE1AC836A03229CAE6A /* SKZipUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKZipUtils.h; path = Framework/External/SKZipUtils.h; sourceTree = "<group>"; };
+		83B7911C384AB0127BC055DBCEBB0681 /* Pods-FWGame-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FWGame-resources.sh"; sourceTree = "<group>"; };
+		849EAE2896884B52C8D2C9D4A2740849 /* Ono.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ono.h; path = Source/Ono.h; sourceTree = "<group>"; };
+		887770089F18F031D97FDC194DF8784A /* TMXObjectGroupNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMXObjectGroupNode.m; path = Framework/Model/TMXObjectGroupNode.m; sourceTree = "<group>"; };
+		918A6E2522867D105AAE95074DD6E857 /* SKTiledMap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKTiledMap.xcconfig; sourceTree = "<group>"; };
+		92665184940E53EB962791DEFF321D65 /* SKZipUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKZipUtils.m; path = Framework/External/SKZipUtils.m; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A19126FB21188F3F6425FE73C1F1E3AE /* SKTMImageLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKTMImageLayer.m; path = Framework/SpriteKitNode/SKTMImageLayer.m; sourceTree = "<group>"; };
+		A3F01E4E72960ED0E64EFFF3AC8DEE4F /* TMXTileset.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMXTileset.m; path = Framework/Model/TMXTileset.m; sourceTree = "<group>"; };
+		A4D159BDD12E694FF357D7F8C46DFB22 /* Pods-FWGame-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FWGame-frameworks.sh"; sourceTree = "<group>"; };
+		A5544161A09A24E8CE9D077AD338DC3A /* TMXObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMXObject.m; path = Framework/Model/TMXObject.m; sourceTree = "<group>"; };
+		A81524E2E29C20871BF7950AD3B1DC47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		ABBAAA08BA414ACD33E7DEE14D0B5523 /* libSKTiledMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSKTiledMap.a; path = libSKTiledMap.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC787BB338A2CBDC7B841737AF12C983 /* Ono-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ono-prefix.pch"; sourceTree = "<group>"; };
+		B540BD7B0471D767A90229BC414FE801 /* Pods-FWGame-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FWGame-acknowledgements.plist"; sourceTree = "<group>"; };
+		B85E613F5690C3ABE56B8869187EFB7A /* SKTexture+WBUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKTexture+WBUtils.m"; path = "Framework/External/SKTexture+WBUtils.m"; sourceTree = "<group>"; };
+		BBD368320114DEAE4CC287CB7EAFF918 /* Ono.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ono.xcconfig; sourceTree = "<group>"; };
+		C0BF3E11C71B405264DFF484E97BA286 /* Pods-FWGame-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FWGame-dummy.m"; sourceTree = "<group>"; };
+		C22C0230845A139778F35E53F4671F41 /* libPods-FWGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-FWGame.a"; path = "libPods-FWGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BA1D94F0DAEB6B82CCF2C4680044DB /* TMXTileLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMXTileLayer.m; path = Framework/Model/TMXTileLayer.m; sourceTree = "<group>"; };
+		CF9277060AF6D5FC41009EBA4973B3FB /* TMXImageLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXImageLayer.h; path = Framework/Model/TMXImageLayer.h; sourceTree = "<group>"; };
+		D100F1F1F5377A026941C1343762F7D4 /* TMXObjectGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXObjectGroup.h; path = Framework/Model/TMXObjectGroup.h; sourceTree = "<group>"; };
+		D6DADAF7B5B6C3BC73A44F460B35462A /* SKTMObjectGroupLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMObjectGroupLayer.h; path = Framework/SpriteKitNode/SKTMObjectGroupLayer.h; sourceTree = "<group>"; };
+		D6DD872F93FFC9D67782DB201418A0C0 /* SKTMObjectGroupTile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKTMObjectGroupTile.m; path = Framework/SpriteKitNode/SKTMObjectGroupTile.m; sourceTree = "<group>"; };
+		D880993DF2B0C60F2668345C2296203D /* SKColor+TMXColorWithHex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKColor+TMXColorWithHex.m"; path = "Framework/External/SKColor+TMXColorWithHex.m"; sourceTree = "<group>"; };
+		DB05D41C09FC2406C1376A6AA89E237D /* OrthogonalRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OrthogonalRenderer.h; path = Framework/Classes/OrthogonalRenderer.h; sourceTree = "<group>"; };
+		DB2171F6200DB61351DB9B7840C725C3 /* SKTMMapLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKTMMapLayer.m; path = Framework/SpriteKitNode/SKTMMapLayer.m; sourceTree = "<group>"; };
+		DDF10E929B3F62BB30485DC42A717EB3 /* TMXTerrain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXTerrain.h; path = Framework/Model/TMXTerrain.h; sourceTree = "<group>"; };
+		E3EC0C54447F739FDBD225B03A0DDAC9 /* IsometricRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IsometricRenderer.m; path = Framework/Classes/IsometricRenderer.m; sourceTree = "<group>"; };
+		E77AF6C55AAA4525552FE990C6423031 /* Ono-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ono-dummy.m"; sourceTree = "<group>"; };
+		E8793A3CED506E65EB6E6DDF81C3B721 /* Pods-FWGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FWGame.release.xcconfig"; sourceTree = "<group>"; };
+		EDB5E9BF4814405567EF272461B3BB1A /* OrthogonalRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OrthogonalRenderer.m; path = Framework/Classes/OrthogonalRenderer.m; sourceTree = "<group>"; };
+		EE6484ED0B4567422A230904EBD12525 /* TMXObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TMXObject.h; path = Framework/Model/TMXObject.h; sourceTree = "<group>"; };
+		EFEFBA3E16C458408E4FB3C324B37F4E /* TMXImageLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMXImageLayer.m; path = Framework/Model/TMXImageLayer.m; sourceTree = "<group>"; };
+		F49643AFEFE1730FF3695391C2CCACFC /* WBMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBMatrix.h; path = Framework/External/WBMatrix.h; sourceTree = "<group>"; };
+		F8EFC2E9652FB53AAD5BB76991B4A13C /* SKTMImageLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMImageLayer.h; path = Framework/SpriteKitNode/SKTMImageLayer.h; sourceTree = "<group>"; };
+		F91F0B10D40C71E0FC2A0C6A9C6DC1B0 /* SKTMNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SKTMNode.h; path = Framework/SpriteKitNode/SKTMNode.h; sourceTree = "<group>"; };
+		F98BDB980A81A40D58145C5A70804693 /* TMXObjectGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TMXObjectGroup.m; path = Framework/Model/TMXObjectGroup.m; sourceTree = "<group>"; };
+		FEC0B3733BFE19EB192CC363C3FB3E57 /* SKTMNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKTMNode.m; path = Framework/SpriteKitNode/SKTMNode.m; sourceTree = "<group>"; };
+		FF744A76D7D181EFD78E0A425B6A1AFD /* SKNode+WBUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SKNode+WBUtils.m"; path = "Framework/External/SKNode+WBUtils.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83F33A70E9508300A0998FE58B2C612B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B17966CE69AB48020579501E0C5033 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF73EE7F1057100C07873CC865D3D2AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A831CD21E48A64FF4BD5B63FEC4E07 /* Foundation.framework in Frameworks */,
+				EC237D29363C3944F1F5392E3E463962 /* SpriteKit.framework in Frameworks */,
+				9D566B2FDE2A2B66E46D638182323158 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6CA277CDAF358C84E14D14B62537F63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4FB1B69A0340B8B0E17D3825A4158B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		077B4D6D7F259BDF62209F9B9BF5EA1F /* Ono */ = {
+			isa = PBXGroup;
+			children = (
+				849EAE2896884B52C8D2C9D4A2740849 /* Ono.h */,
+				58DBE314B2D2C48B48F1386A276947F5 /* ONOXMLDocument.h */,
+				5C6FEEF56923E9F87B8087E4E2618196 /* ONOXMLDocument.m */,
+				B5D28FBF057E616DDE93D3D60486A631 /* Support Files */,
+			);
+			name = Ono;
+			path = Ono;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22E14E879D432DF9512CFFF7FECFC4DA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22E14E879D432DF9512CFFF7FECFC4DA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A81524E2E29C20871BF7950AD3B1DC47 /* Foundation.framework */,
+				81E49F964674D9FB3A852C39D314C178 /* SpriteKit.framework */,
+				6839F56E8E85784168265A97D85E84D2 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2D29BC5C55687273730613F90C3F3D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D15FE9E9D240374319672317EAD2E60 /* SKMapRenderer.h */,
+				2DA1E5B554070CD3E4604367B06C89A8 /* TMXBase.h */,
+				CF9277060AF6D5FC41009EBA4973B3FB /* TMXImageLayer.h */,
+				EFEFBA3E16C458408E4FB3C324B37F4E /* TMXImageLayer.m */,
+				5152FE4864C8ACFE03AF7B924BC1283E /* TMXMap.h */,
+				5AD07E90F1AF75FC3A233E0FBBB58334 /* TMXMap.m */,
+				EE6484ED0B4567422A230904EBD12525 /* TMXObject.h */,
+				A5544161A09A24E8CE9D077AD338DC3A /* TMXObject.m */,
+				D100F1F1F5377A026941C1343762F7D4 /* TMXObjectGroup.h */,
+				F98BDB980A81A40D58145C5A70804693 /* TMXObjectGroup.m */,
+				753DF7902BD61E8713B13D58F9A94018 /* TMXObjectGroupNode.h */,
+				887770089F18F031D97FDC194DF8784A /* TMXObjectGroupNode.m */,
+				DDF10E929B3F62BB30485DC42A717EB3 /* TMXTerrain.h */,
+				49E5A75923490801BAFC26B262872464 /* TMXTerrain.m */,
+				5232842891A2E7F7CAA9E395BABAC774 /* TMXTile.h */,
+				7FDDBE857437725DF1FA91DB1FE4B1FE /* TMXTile.m */,
+				0C027BD0E3E3BFECB31B86E7137C52EE /* TMXTileLayer.h */,
+				C3BA1D94F0DAEB6B82CCF2C4680044DB /* TMXTileLayer.m */,
+				0793924F64EBD4B08EA33899BBEFA28B /* TMXTileset.h */,
+				A3F01E4E72960ED0E64EFFF3AC8DEE4F /* TMXTileset.m */,
+				3C636FAC4C4339B9A5720B1608C981D8 /* TMXTypes.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				E8EDF9885FF517D4DA07CF819BE2D3E3 /* Pods */,
+				86ED978A3751F74B1CDFC1D37D0EBDE1 /* Products */,
+				F15F2326C7DB9FB4CAA97490A01FAA89 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		86ED978A3751F74B1CDFC1D37D0EBDE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7319D03B78CE426505334B251FA4C307 /* libOno.a */,
+				C22C0230845A139778F35E53F4671F41 /* libPods-FWGame.a */,
+				ABBAAA08BA414ACD33E7DEE14D0B5523 /* libSKTiledMap.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95DDE25455EB243F3002FAB232CFB8CC /* SpriteKitNode */ = {
+			isa = PBXGroup;
+			children = (
+				33435B15A6052BCFDBEAE32C1530E948 /* HexagonalRenderer.h */,
+				1B6E6FEE6EB16FD737840A866C0C7614 /* HexagonalRenderer.m */,
+				3D27F679E1494FE3C9559AAEDBF9DCED /* IsometricRenderer.h */,
+				E3EC0C54447F739FDBD225B03A0DDAC9 /* IsometricRenderer.m */,
+				DB05D41C09FC2406C1376A6AA89E237D /* OrthogonalRenderer.h */,
+				EDB5E9BF4814405567EF272461B3BB1A /* OrthogonalRenderer.m */,
+				49ECD437BDA420D068F3C7AD3C599B3D /* SKMapRenderer.m */,
+				737EF534E20995677C4B29FBB8B2FB42 /* SKTMBase.h */,
+				F8EFC2E9652FB53AAD5BB76991B4A13C /* SKTMImageLayer.h */,
+				A19126FB21188F3F6425FE73C1F1E3AE /* SKTMImageLayer.m */,
+				50A3EB605F086EF87C282FDB4D8BCB12 /* SKTMLayer.h */,
+				26C72C99B9B904C8AFDECDD7BC9A168C /* SKTMLayer.m */,
+				0072F58E4B1AE15FE44EDD1FE83EE73B /* SKTMMapLayer.h */,
+				DB2171F6200DB61351DB9B7840C725C3 /* SKTMMapLayer.m */,
+				F91F0B10D40C71E0FC2A0C6A9C6DC1B0 /* SKTMNode.h */,
+				FEC0B3733BFE19EB192CC363C3FB3E57 /* SKTMNode.m */,
+				D6DADAF7B5B6C3BC73A44F460B35462A /* SKTMObjectGroupLayer.h */,
+				2705B52FD4EAD9EBE7C7D46A4B9CAD75 /* SKTMObjectGroupLayer.m */,
+				26A974590229134ABE1B8F7DAFD180FD /* SKTMObjectGroupShape.h */,
+				793E5757DC25861EB4D0CCDB068E652E /* SKTMObjectGroupShape.m */,
+				3119EF535D73BC2390BA68A018A9F5C9 /* SKTMObjectGroupTile.h */,
+				D6DD872F93FFC9D67782DB201418A0C0 /* SKTMObjectGroupTile.m */,
+				68D669936A3A828B132DA83407E9A473 /* SKTMTileLayer.h */,
+				53032F82E637F2E0C3456BE7D7E981D0 /* SKTMTileLayer.m */,
+				031E7A5C7E3C1742B4578492334A927A /* SKTMTileNode.h */,
+				195FFCD9B0A5912650C6844C6CAC779D /* SKTMTileNode.m */,
+				6ECAD63C1CC8EE1C47D9F93FD18934F5 /* StaggeredRenderer.h */,
+				37E8DB6630F230D9A2E69BC11FE624AD /* StaggeredRenderer.m */,
+			);
+			name = SpriteKitNode;
+			sourceTree = "<group>";
+		};
+		AE07FAC72B67F547CEAF60B0A25E28E9 /* Pods-FWGame */ = {
+			isa = PBXGroup;
+			children = (
+				488CC3C5E31C7ADDBAF6908BF72AAF8F /* Pods-FWGame-acknowledgements.markdown */,
+				B540BD7B0471D767A90229BC414FE801 /* Pods-FWGame-acknowledgements.plist */,
+				C0BF3E11C71B405264DFF484E97BA286 /* Pods-FWGame-dummy.m */,
+				A4D159BDD12E694FF357D7F8C46DFB22 /* Pods-FWGame-frameworks.sh */,
+				83B7911C384AB0127BC055DBCEBB0681 /* Pods-FWGame-resources.sh */,
+				36C0058A36738DF851BE151A7623A3D3 /* Pods-FWGame.debug.xcconfig */,
+				E8793A3CED506E65EB6E6DDF81C3B721 /* Pods-FWGame.release.xcconfig */,
+			);
+			name = "Pods-FWGame";
+			path = "Target Support Files/Pods-FWGame";
+			sourceTree = "<group>";
+		};
+		B5D28FBF057E616DDE93D3D60486A631 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBD368320114DEAE4CC287CB7EAFF918 /* Ono.xcconfig */,
+				E77AF6C55AAA4525552FE990C6423031 /* Ono-dummy.m */,
+				AC787BB338A2CBDC7B841737AF12C983 /* Ono-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Ono";
+			sourceTree = "<group>";
+		};
+		C442B38DF61999C2B40762A51354E14F /* External */ = {
+			isa = PBXGroup;
+			children = (
+				26201BA613A71B81300005F6E7921646 /* SKColor+TMXColorWithHex.h */,
+				D880993DF2B0C60F2668345C2296203D /* SKColor+TMXColorWithHex.m */,
+				5C15EAF102C2412D7F60229B5D775C37 /* SKNode+WBUtils.h */,
+				FF744A76D7D181EFD78E0A425B6A1AFD /* SKNode+WBUtils.m */,
+				2E55AAF2B3DB0CCF75DC73D16C009A0F /* SKTexture+WBUtils.h */,
+				B85E613F5690C3ABE56B8869187EFB7A /* SKTexture+WBUtils.m */,
+				82147F5376A88CE1AC836A03229CAE6A /* SKZipUtils.h */,
+				92665184940E53EB962791DEFF321D65 /* SKZipUtils.m */,
+				7293125C3160756D9B623A729856D4FC /* WBImage+WBUtils.h */,
+				0CE0D28E13448290408DCEA1593BCA74 /* WBImage+WBUtils.m */,
+				F49643AFEFE1730FF3695391C2CCACFC /* WBMatrix.h */,
+				50A46D2EBE06B3D441E2F951305B3B1F /* WBMatrix.m */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		DFBE722C3608BC036923B0DD1952B9C0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				918A6E2522867D105AAE95074DD6E857 /* SKTiledMap.xcconfig */,
+				5AE6963E856B623B848C0E4D9429011E /* SKTiledMap-dummy.m */,
+				4E7897E5E9528DBB7E74896FA184681A /* SKTiledMap-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SKTiledMap";
+			sourceTree = "<group>";
+		};
+		E6897DD110A00C4A6F62EE2E9F0801F4 /* SKTiledMap */ = {
+			isa = PBXGroup;
+			children = (
+				17447227BD9F39A0A3101699C6EBC160 /* SKTiledMap.h */,
+				C442B38DF61999C2B40762A51354E14F /* External */,
+				2D29BC5C55687273730613F90C3F3D30 /* Model */,
+				95DDE25455EB243F3002FAB232CFB8CC /* SpriteKitNode */,
+				DFBE722C3608BC036923B0DD1952B9C0 /* Support Files */,
+			);
+			name = SKTiledMap;
+			path = SKTiledMap;
+			sourceTree = "<group>";
+		};
+		E8EDF9885FF517D4DA07CF819BE2D3E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				077B4D6D7F259BDF62209F9B9BF5EA1F /* Ono */,
+				E6897DD110A00C4A6F62EE2E9F0801F4 /* SKTiledMap */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F15F2326C7DB9FB4CAA97490A01FAA89 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE07FAC72B67F547CEAF60B0A25E28E9 /* Pods-FWGame */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		282F17572A89FDD31EBEA0E5855F40B8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF3C5747FF0889D5E4A86C608565163A /* Ono.h in Headers */,
+				A3344DC16CDCEA26A5766F623CE7B50F /* ONOXMLDocument.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8E818F03658B7B99BB8C4C7DF3B05B8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7301A555D0E7EADD383108F255DBD65E /* HexagonalRenderer.h in Headers */,
+				3F69F2CC91BC7FA01FC3B06E0A8E2C69 /* IsometricRenderer.h in Headers */,
+				182586CEF93AE27CD95B32A32246E53A /* OrthogonalRenderer.h in Headers */,
+				CE1D2B6F7DAD161D5F6C82639BB153BC /* SKColor+TMXColorWithHex.h in Headers */,
+				DE60576F4AF8342D0493EF6FF3093951 /* SKMapRenderer.h in Headers */,
+				C81651F6E2EC315D39BF1DC252F0CE12 /* SKNode+WBUtils.h in Headers */,
+				E0C647425D02CB1CA6A5B730EAA9E207 /* SKTexture+WBUtils.h in Headers */,
+				FE09754E7D119F19EA3700DC80C57047 /* SKTiledMap.h in Headers */,
+				7190FEBBFA57769125EE7467521B982F /* SKTMBase.h in Headers */,
+				32F45BA9DD5582AB2E9D6883B13D6F2E /* SKTMImageLayer.h in Headers */,
+				063D2CEC579BFC1EC7C386F555DF1FA8 /* SKTMLayer.h in Headers */,
+				9ED37DE29983D1FC99445B8D38291047 /* SKTMMapLayer.h in Headers */,
+				FC30D8624D83CC70936EFE8A590F2483 /* SKTMNode.h in Headers */,
+				0F4AB6FEF6589A9D86A276A474FFC53A /* SKTMObjectGroupLayer.h in Headers */,
+				439CC5DECB9B40CCE396BC11EC64C14F /* SKTMObjectGroupShape.h in Headers */,
+				6A2B8D8BC28B776BA408898EB1279463 /* SKTMObjectGroupTile.h in Headers */,
+				0F47F0651C3277BF25740A382C1CC0FB /* SKTMTileLayer.h in Headers */,
+				3CF061C158C043E1FFD77B7BE98B9E87 /* SKTMTileNode.h in Headers */,
+				1E5BD0ED0D42B066CF95C509CDB41CF7 /* SKZipUtils.h in Headers */,
+				67C7EB69D98DCAC95355902DFFB5F385 /* StaggeredRenderer.h in Headers */,
+				DD2CECC27F16B925D08A5E28385814FF /* TMXBase.h in Headers */,
+				4107782E3924F24AC6779AB5EF0E65C7 /* TMXImageLayer.h in Headers */,
+				779613493ABC9F799B553EB0FF0A3F54 /* TMXMap.h in Headers */,
+				13ADFD5742ACF90D32304BAD69186CB2 /* TMXObject.h in Headers */,
+				28BEEE0F31217849A10BAD68AD2269B7 /* TMXObjectGroup.h in Headers */,
+				5F65D8C3348AC2D1BB6FFC9428CDF6E9 /* TMXObjectGroupNode.h in Headers */,
+				71515001F3B1B801F027112BDAE329A3 /* TMXTerrain.h in Headers */,
+				D07D88142AFD37E62480842A7897CF44 /* TMXTile.h in Headers */,
+				0C2878FFF7CF1C7E85D19F478FB9DF29 /* TMXTileLayer.h in Headers */,
+				898B3BEFA7BF3F43B81016D7C6BF5A70 /* TMXTileset.h in Headers */,
+				1775938478FD3E66321F24304E4314E3 /* TMXTypes.h in Headers */,
+				31BC6259FAB320C486F16A8DAC8279BA /* WBImage+WBUtils.h in Headers */,
+				30156A77ED61D5D6F452B6AAFAD58FFB /* WBMatrix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4FF021C548DD7101989BD5650683DC9E /* Ono */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F15BF540BD41F0D5BD28E2B016EE249 /* Build configuration list for PBXNativeTarget "Ono" */;
+			buildPhases = (
+				36FCF219E76E72CC44FE69387FAFE3C5 /* Sources */,
+				E6CA277CDAF358C84E14D14B62537F63 /* Frameworks */,
+				282F17572A89FDD31EBEA0E5855F40B8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ono;
+			productName = Ono;
+			productReference = 7319D03B78CE426505334B251FA4C307 /* libOno.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B019E0264BD0229DD1FF963E50D4577A /* SKTiledMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95ABBC05B3CDD0F0D10D0D82EB084380 /* Build configuration list for PBXNativeTarget "SKTiledMap" */;
+			buildPhases = (
+				845C94417AFD79CB25A2D4B4DA2C8EC3 /* Sources */,
+				AF73EE7F1057100C07873CC865D3D2AD /* Frameworks */,
+				C8E818F03658B7B99BB8C4C7DF3B05B8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				073AB7A2FF8332AABA7C83DBA2F38A23 /* PBXTargetDependency */,
+			);
+			name = SKTiledMap;
+			productName = SKTiledMap;
+			productReference = ABBAAA08BA414ACD33E7DEE14D0B5523 /* libSKTiledMap.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EBF4D0636A8688B1D1C2C0C3EB673874 /* Pods-FWGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0281643DB680224015568BBEDAAE0D49 /* Build configuration list for PBXNativeTarget "Pods-FWGame" */;
+			buildPhases = (
+				C8A197E072D2F0B1E167F694C0CE5DB5 /* Sources */,
+				83F33A70E9508300A0998FE58B2C612B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9F575C184170D49DE09AB63DB969C56 /* PBXTargetDependency */,
+				32C7AA0F982AE3336081518FA80243D4 /* PBXTargetDependency */,
+			);
+			name = "Pods-FWGame";
+			productName = "Pods-FWGame";
+			productReference = C22C0230845A139778F35E53F4671F41 /* libPods-FWGame.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 86ED978A3751F74B1CDFC1D37D0EBDE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FF021C548DD7101989BD5650683DC9E /* Ono */,
+				EBF4D0636A8688B1D1C2C0C3EB673874 /* Pods-FWGame */,
+				B019E0264BD0229DD1FF963E50D4577A /* SKTiledMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36FCF219E76E72CC44FE69387FAFE3C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A1776E19032ED9F7AF25B2063804D3 /* Ono-dummy.m in Sources */,
+				C22EB9C8780E5C290797B0719E67C828 /* ONOXMLDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845C94417AFD79CB25A2D4B4DA2C8EC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2912F29EBB0D87DC65E46CF91BEDFF12 /* HexagonalRenderer.m in Sources */,
+				71AB25E18DC8970DD79E910A5278EF69 /* IsometricRenderer.m in Sources */,
+				376EE680B10698308B1DA8623E630190 /* OrthogonalRenderer.m in Sources */,
+				6ED9FDC2D39708934B6E7A3CB60C8FAE /* SKColor+TMXColorWithHex.m in Sources */,
+				0D11E6942F46F518F753C5465B410F07 /* SKMapRenderer.m in Sources */,
+				C67442C39E6D6B884675ED2A49612BE7 /* SKNode+WBUtils.m in Sources */,
+				5305D3035957F008DC83B870A5E12026 /* SKTexture+WBUtils.m in Sources */,
+				45EC74CE8949FDDA574FCB388D082FDE /* SKTiledMap-dummy.m in Sources */,
+				684CFC9E1CEFFC9E444CF6CA8E4B74A1 /* SKTMImageLayer.m in Sources */,
+				D695753895CD2CB886FD7CA1F23A0B41 /* SKTMLayer.m in Sources */,
+				198EDA67671DC916162CA7E90586048A /* SKTMMapLayer.m in Sources */,
+				2B8C0E68C7F9B6F653A107E061AEA83E /* SKTMNode.m in Sources */,
+				5FACB319CD716CC6BB9212EF0960FE3D /* SKTMObjectGroupLayer.m in Sources */,
+				9FAF30E487C3138B6A1833D667C9B623 /* SKTMObjectGroupShape.m in Sources */,
+				AE9DEF91C75C4CF7F2D8ECA148260D64 /* SKTMObjectGroupTile.m in Sources */,
+				269439EC22A1590C5D273931522040D1 /* SKTMTileLayer.m in Sources */,
+				EFA7C54F37B055CC3F329F3044582781 /* SKTMTileNode.m in Sources */,
+				875DB565261C378664EA24E1DC5D484B /* SKZipUtils.m in Sources */,
+				AE0FC781A4EDFD06ECB6EC8AE7A852AA /* StaggeredRenderer.m in Sources */,
+				8B95E189335D094B4169EF3DB859F51E /* TMXImageLayer.m in Sources */,
+				C563681E3EE74247D5EE49F1A8998FAA /* TMXMap.m in Sources */,
+				BDA70607AC971AF5DC89877CE2B90F4B /* TMXObject.m in Sources */,
+				D8484A9A1EE66F88421EB4D4A1191637 /* TMXObjectGroup.m in Sources */,
+				24BD3CCD1C6B57968A977E638C32EBC4 /* TMXObjectGroupNode.m in Sources */,
+				68D278FDA67EC0387089C457F17A5925 /* TMXTerrain.m in Sources */,
+				BC4787FCFCFFDBD574820E6102C07C68 /* TMXTile.m in Sources */,
+				7B22EDC4D271CB337D845E7C3EDEB882 /* TMXTileLayer.m in Sources */,
+				650C960077D00EE25D2D8E764FC0C2B9 /* TMXTileset.m in Sources */,
+				E89370A4D5DA4142E155785EE6F96782 /* WBImage+WBUtils.m in Sources */,
+				730D44139B452F4F899FDAC6A26B9955 /* WBMatrix.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8A197E072D2F0B1E167F694C0CE5DB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				136724B0ED209352CE8AD57C67A0F50C /* Pods-FWGame-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		073AB7A2FF8332AABA7C83DBA2F38A23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Ono;
+			target = 4FF021C548DD7101989BD5650683DC9E /* Ono */;
+			targetProxy = 4EE59E6A4A30FE948743639C10979A7E /* PBXContainerItemProxy */;
+		};
+		32C7AA0F982AE3336081518FA80243D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SKTiledMap;
+			target = B019E0264BD0229DD1FF963E50D4577A /* SKTiledMap */;
+			targetProxy = 6A87856F706AF685CFA4E98F7184542F /* PBXContainerItemProxy */;
+		};
+		D9F575C184170D49DE09AB63DB969C56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Ono;
+			target = 4FF021C548DD7101989BD5650683DC9E /* Ono */;
+			targetProxy = 2FA30DA9B05FCD0E7E71E8443DB609A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1C1DCE8320EABF651C2D00EB351F80FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 918A6E2522867D105AAE95074DD6E857 /* SKTiledMap.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SKTiledMap/SKTiledMap-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E42A5D956B3E98407B9342CFE81AB73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBD368320114DEAE4CC287CB7EAFF918 /* Ono.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Ono/Ono-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		54492B65F25AD45C40A673355DB545E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36C0058A36738DF851BE151A7623A3D3 /* Pods-FWGame.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C104F7F091290C3D1E248192F07FE689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DD98B74B0FB2672707E27B9146618D32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8793A3CED506E65EB6E6DDF81C3B721 /* Pods-FWGame.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F05FF164F736CB87C47F51E48DB28317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBD368320114DEAE4CC287CB7EAFF918 /* Ono.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Ono/Ono-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F309A8BDF681A2F91E2FBD6BC5EA840A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 918A6E2522867D105AAE95074DD6E857 /* SKTiledMap.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SKTiledMap/SKTiledMap-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0281643DB680224015568BBEDAAE0D49 /* Build configuration list for PBXNativeTarget "Pods-FWGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54492B65F25AD45C40A673355DB545E9 /* Debug */,
+				DD98B74B0FB2672707E27B9146618D32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F15BF540BD41F0D5BD28E2B016EE249 /* Build configuration list for PBXNativeTarget "Ono" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F05FF164F736CB87C47F51E48DB28317 /* Debug */,
+				4E42A5D956B3E98407B9342CFE81AB73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C104F7F091290C3D1E248192F07FE689 /* Debug */,
+				34FE9531DA9AF2820790339988D5FF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95ABBC05B3CDD0F0D10D0D82EB084380 /* Build configuration list for PBXNativeTarget "SKTiledMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C1DCE8320EABF651C2D00EB351F80FF /* Debug */,
+				F309A8BDF681A2F91E2FBD6BC5EA840A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

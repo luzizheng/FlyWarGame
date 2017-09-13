@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="left-up" width="2" height="5" tilewidth="513" tileheight="499" nextobjectid="1">
+ <tileset firstgid="1" source="spaceMap.tsx"/>
+ <layer name="块层 1" width="2" height="5">
+  <data encoding="csv">
+1,1,
+1,1,
+1,1,
+1,1,
+1,1
+</data>
+ </layer>
+</map>

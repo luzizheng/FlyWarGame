@@ -1,0 +1,23 @@
+PODS:
+  - Ono (1.2.2)
+  - SKTiledMap (1.0.0):
+    - SKTiledMap/External (= 1.0.0)
+    - SKTiledMap/Model (= 1.0.0)
+    - SKTiledMap/SpriteKitNode (= 1.0.0)
+  - SKTiledMap/External (1.0.0)
+  - SKTiledMap/Model (1.0.0):
+    - Ono
+    - SKTiledMap/External
+  - SKTiledMap/SpriteKitNode (1.0.0):
+    - SKTiledMap/Model
+
+DEPENDENCIES:
+  - SKTiledMap
+
+SPEC CHECKSUMS:
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+  SKTiledMap: 8769602c1799e9bf7b19e1577a8ffbcede4d90aa
+
+PODFILE CHECKSUM: 2cb70604956007b4feb99575261573cd25e8c881
+
+COCOAPODS: 1.2.1

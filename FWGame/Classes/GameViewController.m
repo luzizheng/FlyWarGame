@@ -16,15 +16,8 @@
 
     // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
     // including entities and graphs.
-    GKScene *scene = [GKScene sceneWithFileNamed:@"GameScene"];
-    
-    // Get the SKScene from the loaded GKScene
-    GameScene *sceneNode = (GameScene *)scene.rootNode;
-    
-    // Copy gameplay related content over to the scene
-    sceneNode.entities = [scene.entities mutableCopy];
-    sceneNode.graphs = [scene.graphs mutableCopy];
-    
+    GameScene *sceneNode = [GameScene sceneWithSize:[self getDisplaySize]];
+
     // Set the scale mode to scale to fit the window
     sceneNode.scaleMode = SKSceneScaleModeAspectFill;
     
@@ -37,8 +30,17 @@
     skView.showsNodeCount = YES;
 }
 
+-(CGSize)getDisplaySize
+{
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+        return CGSizeMake(750, 1334);
+    }else{
+        return CGSizeMake(768, 1024);
+    }
+}
+
 - (BOOL)shouldAutorotate {
-    return YES;
+    return NO;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {

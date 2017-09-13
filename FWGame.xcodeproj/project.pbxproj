@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093FCE66E9E2C7F9DA1BB523 /* libPods-FWGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139A9030AE8CE8E8C5A66A9F /* libPods-FWGame.a */; };
+		61B77D7A1F68D4D000EA3B51 /* GameCxt.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B77D791F68D4D000EA3B51 /* GameCxt.m */; };
+		61B77D7E1F68D66000EA3B51 /* FWPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B77D7D1F68D66000EA3B51 /* FWPlane.m */; };
 		61C128731F668DD800C58980 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C128721F668DD800C58980 /* AppDelegate.m */; };
 		61C128751F668DD800C58980 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 61C128741F668DD800C58980 /* GameScene.sks */; };
 		61C128771F668DD800C58980 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 61C128761F668DD800C58980 /* Actions.sks */; };
@@ -16,9 +19,18 @@
 		61C128821F668DD800C58980 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C128811F668DD800C58980 /* Assets.xcassets */; };
 		61C128851F668DD800C58980 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C128831F668DD800C58980 /* LaunchScreen.storyboard */; };
 		61C128881F668DD800C58980 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C128871F668DD800C58980 /* main.m */; };
+		61C54B6A1F67B98100B2DBE0 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C54B691F67B96400B2DBE0 /* bg.png */; };
+		61C54B6E1F67C31C00B2DBE0 /* spaceMap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 61C54B6C1F67C2C700B2DBE0 /* spaceMap.tmx */; };
+		61C54B701F67C37800B2DBE0 /* spaceMap.tsx in Resources */ = {isa = PBXBuildFile; fileRef = 61C54B6F1F67C36800B2DBE0 /* spaceMap.tsx */; };
+		61D640D01F67DC21003110AE /* SpaceBgNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D640CF1F67DC21003110AE /* SpaceBgNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		139A9030AE8CE8E8C5A66A9F /* libPods-FWGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FWGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61B77D781F68D4D000EA3B51 /* GameCxt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameCxt.h; sourceTree = "<group>"; };
+		61B77D791F68D4D000EA3B51 /* GameCxt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameCxt.m; sourceTree = "<group>"; };
+		61B77D7C1F68D66000EA3B51 /* FWPlane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWPlane.h; sourceTree = "<group>"; };
+		61B77D7D1F68D66000EA3B51 /* FWPlane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWPlane.m; sourceTree = "<group>"; };
 		61C1286E1F668DD800C58980 /* FWGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C128711F668DD800C58980 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61C128721F668DD800C58980 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,6 +48,13 @@
 		61C1288E1F6691AF00C58980 /* GameUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameUtils.h; sourceTree = "<group>"; };
 		61C1288F1F6691CD00C58980 /* GameConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConst.h; sourceTree = "<group>"; };
 		61C128901F6691E500C58980 /* PrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
+		61C54B691F67B96400B2DBE0 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../../../../Downloads/bg.png; sourceTree = "<group>"; };
+		61C54B6C1F67C2C700B2DBE0 /* spaceMap.tmx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = spaceMap.tmx; sourceTree = "<group>"; };
+		61C54B6F1F67C36800B2DBE0 /* spaceMap.tsx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = spaceMap.tsx; sourceTree = "<group>"; };
+		61D640CE1F67DC21003110AE /* SpaceBgNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceBgNode.h; sourceTree = "<group>"; };
+		61D640CF1F67DC21003110AE /* SpaceBgNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceBgNode.m; sourceTree = "<group>"; };
+		9B5A40293B7B83C2E4B735AC /* Pods-FWGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FWGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FWGame/Pods-FWGame.debug.xcconfig"; sourceTree = "<group>"; };
+		B5B6BD44DAD871C5F2B03252 /* Pods-FWGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FWGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-FWGame/Pods-FWGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +62,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093FCE66E9E2C7F9DA1BB523 /* libPods-FWGame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58DA2551E70B04A6BA31AAD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				139A9030AE8CE8E8C5A66A9F /* libPods-FWGame.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61B77D7B1F68D60E00EA3B51 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				61B77D781F68D4D000EA3B51 /* GameCxt.h */,
+				61B77D791F68D4D000EA3B51 /* GameCxt.m */,
+				61C128781F668DD800C58980 /* GameScene.h */,
+				61C128791F668DD800C58980 /* GameScene.m */,
+				61D640CE1F67DC21003110AE /* SpaceBgNode.h */,
+				61D640CF1F67DC21003110AE /* SpaceBgNode.m */,
+				61C1287B1F668DD800C58980 /* GameViewController.h */,
+				61C1287C1F668DD800C58980 /* GameViewController.m */,
+				61B77D7C1F68D66000EA3B51 /* FWPlane.h */,
+				61B77D7D1F68D66000EA3B51 /* FWPlane.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		61C128651F668DD800C58980 = {
 			isa = PBXGroup;
 			children = (
 				61C128701F668DD800C58980 /* FWGame */,
 				61C1286F1F668DD800C58980 /* Products */,
+				64D0FD3A0561B08B6AA6BA73 /* Pods */,
+				58DA2551E70B04A6BA31AAD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,17 +115,14 @@
 		61C128701F668DD800C58980 /* FWGame */ = {
 			isa = PBXGroup;
 			children = (
-				61C128911F6691F600C58980 /* Common */,
-				61C54B571F6696A100B2DBE0 /* Source */,
-				61C128781F668DD800C58980 /* GameScene.h */,
-				61C128791F668DD800C58980 /* GameScene.m */,
-				61C1287B1F668DD800C58980 /* GameViewController.h */,
-				61C1287C1F668DD800C58980 /* GameViewController.m */,
 				61C1287E1F668DD800C58980 /* Main.storyboard */,
+				61C128861F668DD800C58980 /* Info.plist */,
 				61C128811F668DD800C58980 /* Assets.xcassets */,
 				61C128831F668DD800C58980 /* LaunchScreen.storyboard */,
-				61C128861F668DD800C58980 /* Info.plist */,
 				61C128871F668DD800C58980 /* main.m */,
+				61C128911F6691F600C58980 /* Common */,
+				61C54B571F6696A100B2DBE0 /* Source */,
+				61B77D7B1F68D60E00EA3B51 /* Classes */,
 			);
 			path = FWGame;
 			sourceTree = "<group>";
@@ -98,10 +142,22 @@
 		61C54B571F6696A100B2DBE0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				61C54B6F1F67C36800B2DBE0 /* spaceMap.tsx */,
+				61C54B6C1F67C2C700B2DBE0 /* spaceMap.tmx */,
+				61C54B691F67B96400B2DBE0 /* bg.png */,
 				61C128741F668DD800C58980 /* GameScene.sks */,
 				61C128761F668DD800C58980 /* Actions.sks */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		64D0FD3A0561B08B6AA6BA73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B5A40293B7B83C2E4B735AC /* Pods-FWGame.debug.xcconfig */,
+				B5B6BD44DAD871C5F2B03252 /* Pods-FWGame.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61C1288B1F668DD800C58980 /* Build configuration list for PBXNativeTarget "FWGame" */;
 			buildPhases = (
+				5C3DC8FB63F59C46D2A468B4 /* [CP] Check Pods Manifest.lock */,
 				61C1286A1F668DD800C58980 /* Sources */,
 				61C1286B1F668DD800C58980 /* Frameworks */,
 				61C1286C1F668DD800C58980 /* Resources */,
+				996C4E4F104974BD43AEC4D7 /* [CP] Embed Pods Frameworks */,
+				C434741925F2575E3644FB8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,6 +221,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C54B701F67C37800B2DBE0 /* spaceMap.tsx in Resources */,
+				61C54B6E1F67C31C00B2DBE0 /* spaceMap.tmx in Resources */,
+				61C54B6A1F67B98100B2DBE0 /* bg.png in Resources */,
 				61C128801F668DD800C58980 /* Main.storyboard in Resources */,
 				61C128751F668DD800C58980 /* GameScene.sks in Resources */,
 				61C128821F668DD800C58980 /* Assets.xcassets in Resources */,
@@ -172,15 +234,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C3DC8FB63F59C46D2A468B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		996C4E4F104974BD43AEC4D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FWGame/Pods-FWGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C434741925F2575E3644FB8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FWGame/Pods-FWGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		61C1286A1F668DD800C58980 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61D640D01F67DC21003110AE /* SpaceBgNode.m in Sources */,
 				61C1287A1F668DD800C58980 /* GameScene.m in Sources */,
 				61C1287D1F668DD800C58980 /* GameViewController.m in Sources */,
 				61C128881F668DD800C58980 /* main.m in Sources */,
 				61C128731F668DD800C58980 /* AppDelegate.m in Sources */,
+				61B77D7E1F68D66000EA3B51 /* FWPlane.m in Sources */,
+				61B77D7A1F68D4D000EA3B51 /* GameCxt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,30 +425,35 @@
 		};
 		61C1288C1F668DD800C58980 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B5A40293B7B83C2E4B735AC /* Pods-FWGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5D22G25F5Z;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FWGame/Common/PrefixHeader.h";
 				INFOPLIST_FILE = FWGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.luzz.FWGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ucsmy.FWGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "cb87a84b-ef3d-4edf-b896-1bcce1424729";
+				PROVISIONING_PROFILE_SPECIFIER = UCSDeveloper;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		61C1288D1F668DD800C58980 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B6BD44DAD871C5F2B03252 /* Pods-FWGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FWGame/Common/PrefixHeader.h";
 				INFOPLIST_FILE = FWGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.luzz.FWGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ucsmy.FWGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
