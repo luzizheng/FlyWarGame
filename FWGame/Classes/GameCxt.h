@@ -14,6 +14,8 @@
 
 @property(nonatomic,assign)GameStatus gameStatus;
 
+@property(nonatomic,assign)NSInteger score;
+
 @end
 
 #define GCxt [GameCxt sharedInstance]

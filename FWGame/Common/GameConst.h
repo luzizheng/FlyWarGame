@@ -42,7 +42,7 @@ typedef enum : uint32_t {
 #define FWEnemyComeoutFrequency 1.5
 
 // 敌机速度
-#define FWEnemyPlaneSpeed 200.0
+#define FWEnemyPlaneSpeed 220.0
 
 // 子弹飞行速度
 #define FWBulletFlySpeed 500.0

@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "FWBullet.h"
 
 @interface FWPlane : SKSpriteNode
 
@@ -19,7 +20,9 @@
 
 -(instancetype)initWithImageNamed:(NSString *)name isMajorPlane:(BOOL)isMajorPlane;
 
--(SKSpriteNode *)myBullet;
+-(FWBullet *)myBullet;
+
+-(void)hitByAttack:(NSInteger)attackValue;
 
 
 @end

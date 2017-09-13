@@ -10,11 +10,14 @@
 #import "SKTiledMap/SKTiledMap.h"
 #import "SpaceBgNode.h"
 #import "FWPlane.h"
+#import "FWBullet.h"
+#import <AVFoundation/AVFoundation.h>
 
-
-@interface GameScene()<SKPhysicsContactDelegate>
+@interface GameScene()<SKPhysicsContactDelegate,AVAudioPlayerDelegate>
 @property(nonatomic,strong)FWPlane * myPlane;
 @property(nonatomic,strong)SpaceBgNode * spaceBackground;
+@property(nonatomic,strong)SKLabelNode * scoreLabel;
+@property(nonatomic,strong)AVAudioPlayer *audioPlayer;
 @end
 
 @implementation GameScene {
@@ -47,9 +50,38 @@
     [labelNode runAction:[SKAction fadeInWithDuration:2.0]];
     
     _label = labelNode;
+    
+    // score label
+    self.scoreLabel.position = CGPointMake(30, 30);
+    [self addChild:self.scoreLabel];
+    
+    [self playBGM:@"menu"];
 }
 
 
+-(void)playBGM:(NSString *)bgmName
+{
+    if (self.audioPlayer) {
+        [self.audioPlayer stop];
+        self.audioPlayer = nil;
+    }
+    NSURL *fileURL = [[NSBundle mainBundle] URLForResource:bgmName withExtension:@"mp3"];
+    // 2.创建 AVAudioPlayer 对象
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    // 4.设置循环播放
+    self.audioPlayer.numberOfLoops = -1;
+    self.audioPlayer.delegate = self;
+    // 5.开始播放
+    [self.audioPlayer play];
+}
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    
+}
+
+-(void)removeFromParent{
+    [self removeObserver:GCxt forKeyPath:@"score"];
+}
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -110,6 +142,7 @@
 // start game
 -(void)startGame
 {
+    [self playBGM:@"ironman"];
     GCxt.gameStatus = GameStatusRunning;
     self.myPlane.position = FWGameStartPoint;
     [self addChild:self.myPlane];
@@ -126,10 +159,11 @@
 -(SKAction *)fireBulletAction
 {
     SKAction * bulletFlyingAction = [SKAction runBlock:^{
-        SKSpriteNode * bullet = [self.myPlane myBullet];
+        FWBullet * bullet = [self.myPlane myBullet];
         bullet.position = CGPointMake(self.myPlane.position.x, self.myPlane.position.y + self.myPlane.size.height/2);
         [self addChild:bullet];
-        NSTimeInterval duration = (self.size.height - bullet.position.y)/FWBulletFlySpeed;
+        [self runAction:[SKAction playSoundFileNamed:@"fireBullet" waitForCompletion:NO]];
+        NSTimeInterval duration = (self.size.height - bullet.position.y)/bullet.bulletSpeed;
         [bullet runAction:[SKAction sequence:@[
                                                [SKAction moveToY:self.size.height duration:duration],
                                                [SKAction removeFromParent]
@@ -176,6 +210,9 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
+    self.scoreLabel.text = [NSString stringWithFormat:@"%ld",(long)GCxt.score];
+    
+    [self configMyPlaneLevel];
     
     // Initialize _lastUpdateTime if it has not already been
     if (_lastUpdateTime == 0) {
@@ -189,16 +226,33 @@
     _lastUpdateTime = currentTime;
 }
 
+-(void)configMyPlaneLevel
+{
+    if (GCxt.score>=100 && GCxt.score<500) {
+        if (self.myPlane.planeLevel != 2) {
+            self.myPlane.planeLevel = 2;
+        }
+    }
+    
+    if (GCxt.score>500) {
+        if (self.myPlane.planeLevel != 3) {
+            self.myPlane.planeLevel = 3;
+        }
+    }
+    
+}
+
 #pragma mark - SKPhysicsContact delegate
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
     if (contact.bodyA.categoryBitMask == GamePhyBullet_Major && contact.bodyB.categoryBitMask == GamePhyPlane_Enemy) {
         // enemy plane hit by you
         [self enemyPlane:contact.bodyB.node hitByBullet:contact.bodyA.node];
+        
     }
     if (contact.bodyA.categoryBitMask == GamePhyPlane_Enemy && contact.bodyB.categoryBitMask == GamePhyBullet_Major) {
         // enemy plane hit by you
-        [self enemyPlane:contact.bodyB.node hitByBullet:contact.bodyA.node];
+        [self enemyPlane:contact.bodyA.node hitByBullet:contact.bodyB.node];
     }
 }
 
@@ -207,12 +261,11 @@
     if ([enemyPlane isKindOfClass:[FWPlane class]] && [bullet isKindOfClass:[SKSpriteNode class]]) {
         
         FWPlane * enemy = (FWPlane *)enemyPlane;
-        SKSpriteNode * b = (SKSpriteNode *)bullet;
         
-        NSInteger hp = enemy.HP;
-        hp-=50;
-        enemy.HP = hp;
-        
+        if (enemy.HP>0) {
+            [enemy hitByAttack:((FWBullet *)bullet).attack];
+            [bullet removeFromParent];
+        }
         
         
     }
@@ -225,6 +278,7 @@
 {
     if (!_myPlane) {
         _myPlane = [[FWPlane alloc] initWithImageNamed:@"myplane" isMajorPlane:YES];
+        _myPlane.planeLevel = 1;
         _myPlane.HP = FWPlaneHP_Major; // 生命值
     }
     return _myPlane;
@@ -242,7 +296,18 @@
     return _spaceBackground;
 }
 
-
+-(SKLabelNode *)scoreLabel
+{
+    if (!_scoreLabel) {
+        _scoreLabel = [SKLabelNode labelNodeWithText:@"0"];
+        _scoreLabel.name = @"scoreLabel";
+        _scoreLabel.fontSize = 40;
+        _scoreLabel.fontColor = [UIColor whiteColor];
+        _scoreLabel.zPosition = GameLayerUI;
+        _scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+    }
+    return _scoreLabel;
+}
 
 
 

@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		093FCE66E9E2C7F9DA1BB523 /* libPods-FWGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139A9030AE8CE8E8C5A66A9F /* libPods-FWGame.a */; };
+		619D56841F69562A0028B580 /* FWBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 619D56831F69562A0028B580 /* FWBullet.m */; };
+		619D56861F695CE70028B580 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619D56851F695CE70028B580 /* AVFoundation.framework */; };
+		619D56891F695E8A0028B580 /* CornfieldChase.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619D56871F695D920028B580 /* CornfieldChase.mp3 */; };
+		619D568B1F695FD70028B580 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619D568A1F695FC30028B580 /* menu.mp3 */; };
+		619D568D1F69614E0028B580 /* ironman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619D568C1F69613F0028B580 /* ironman.mp3 */; };
+		619D568F1F6962590028B580 /* boom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619D568E1F6962470028B580 /* boom.mp3 */; };
+		619D56911F6963E10028B580 /* fireBullet.wav in Resources */ = {isa = PBXBuildFile; fileRef = 619D56901F6963D20028B580 /* fireBullet.wav */; };
 		61B77D7A1F68D4D000EA3B51 /* GameCxt.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B77D791F68D4D000EA3B51 /* GameCxt.m */; };
 		61B77D7E1F68D66000EA3B51 /* FWPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B77D7D1F68D66000EA3B51 /* FWPlane.m */; };
 		61C128731F668DD800C58980 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C128721F668DD800C58980 /* AppDelegate.m */; };
@@ -27,6 +34,14 @@
 
 /* Begin PBXFileReference section */
 		139A9030AE8CE8E8C5A66A9F /* libPods-FWGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FWGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		619D56821F69562A0028B580 /* FWBullet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWBullet.h; sourceTree = "<group>"; };
+		619D56831F69562A0028B580 /* FWBullet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWBullet.m; sourceTree = "<group>"; };
+		619D56851F695CE70028B580 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		619D56871F695D920028B580 /* CornfieldChase.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CornfieldChase.mp3; sourceTree = "<group>"; };
+		619D568A1F695FC30028B580 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu.mp3; sourceTree = "<group>"; };
+		619D568C1F69613F0028B580 /* ironman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ironman.mp3; sourceTree = "<group>"; };
+		619D568E1F6962470028B580 /* boom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = boom.mp3; sourceTree = "<group>"; };
+		619D56901F6963D20028B580 /* fireBullet.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fireBullet.wav; sourceTree = "<group>"; };
 		61B77D781F68D4D000EA3B51 /* GameCxt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameCxt.h; sourceTree = "<group>"; };
 		61B77D791F68D4D000EA3B51 /* GameCxt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameCxt.m; sourceTree = "<group>"; };
 		61B77D7C1F68D66000EA3B51 /* FWPlane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWPlane.h; sourceTree = "<group>"; };
@@ -62,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619D56861F695CE70028B580 /* AVFoundation.framework in Frameworks */,
 				093FCE66E9E2C7F9DA1BB523 /* libPods-FWGame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +88,7 @@
 		58DA2551E70B04A6BA31AAD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				619D56851F695CE70028B580 /* AVFoundation.framework */,
 				139A9030AE8CE8E8C5A66A9F /* libPods-FWGame.a */,
 			);
 			name = Frameworks;
@@ -90,6 +107,8 @@
 				61C1287C1F668DD800C58980 /* GameViewController.m */,
 				61B77D7C1F68D66000EA3B51 /* FWPlane.h */,
 				61B77D7D1F68D66000EA3B51 /* FWPlane.m */,
+				619D56821F69562A0028B580 /* FWBullet.h */,
+				619D56831F69562A0028B580 /* FWBullet.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -142,6 +161,11 @@
 		61C54B571F6696A100B2DBE0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				619D56901F6963D20028B580 /* fireBullet.wav */,
+				619D568E1F6962470028B580 /* boom.mp3 */,
+				619D568C1F69613F0028B580 /* ironman.mp3 */,
+				619D568A1F695FC30028B580 /* menu.mp3 */,
+				619D56871F695D920028B580 /* CornfieldChase.mp3 */,
 				61C54B6F1F67C36800B2DBE0 /* spaceMap.tsx */,
 				61C54B6C1F67C2C700B2DBE0 /* spaceMap.tmx */,
 				61C54B691F67B96400B2DBE0 /* bg.png */,
@@ -221,6 +245,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619D56911F6963E10028B580 /* fireBullet.wav in Resources */,
+				619D568F1F6962590028B580 /* boom.mp3 in Resources */,
+				619D568D1F69614E0028B580 /* ironman.mp3 in Resources */,
+				619D568B1F695FD70028B580 /* menu.mp3 in Resources */,
+				619D56891F695E8A0028B580 /* CornfieldChase.mp3 in Resources */,
 				61C54B701F67C37800B2DBE0 /* spaceMap.tsx in Resources */,
 				61C54B6E1F67C31C00B2DBE0 /* spaceMap.tmx in Resources */,
 				61C54B6A1F67B98100B2DBE0 /* bg.png in Resources */,
@@ -289,6 +318,7 @@
 			files = (
 				61D640D01F67DC21003110AE /* SpaceBgNode.m in Sources */,
 				61C1287A1F668DD800C58980 /* GameScene.m in Sources */,
+				619D56841F69562A0028B580 /* FWBullet.m in Sources */,
 				61C1287D1F668DD800C58980 /* GameViewController.m in Sources */,
 				61C128881F668DD800C58980 /* main.m in Sources */,
 				61C128731F668DD800C58980 /* AppDelegate.m in Sources */,

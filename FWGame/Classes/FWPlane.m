@@ -28,7 +28,7 @@
         }else{
             physicsBody.categoryBitMask = GamePhyPlane_Enemy;
             physicsBody.contactTestBitMask = GamePhyPlane_Major|GamePhyBullet_Major;
-            physicsBody.collisionBitMask = GamePhyBullet_Major;
+            physicsBody.collisionBitMask = GamePhyBullet_Major|GamePhyPlane_Major;
             
             SKShapeNode * hpLine = [SKShapeNode shapeNodeWithRectOfSize:CGSizeMake(self.size.width, 3)];
             [self drawPathRefWithNode:hpLine andValue:FWPlaneHP_Enemy];
@@ -58,7 +58,6 @@
     CGFloat height = 3.0;
     CGFloat width = self.size.width;
     CGFloat length = (((double)value)/((double)FWPlaneHP_Enemy))*width;
-    
     CGMutablePathRef pathRef = CGPathCreateMutable();
     CGPathMoveToPoint(pathRef, nil, -width/2, 0);//起点
     CGPathAddLineToPoint(pathRef, nil, length-width/2, 0);
@@ -69,83 +68,55 @@
     CGPathRelease(pathRef);// 释放
 }
 
+-(void)hitByAttack:(NSInteger)attackValue
+{
+    if (attackValue > self.HP) {
+        self.HP = 0;
+    }else{
+        self.HP = self.HP - attackValue;
+    }
+}
 
--(void)setHP:(NSUInteger)HP
+-(void)setHP:(NSInteger)HP
 {
     if (HP>0) {
         _HP = HP;
-        
-        SKShapeNode * hpLine = (SKShapeNode *)[self childNodeWithName:@"hp"];
-        if (hpLine) {
-            [self drawPathRefWithNode:hpLine andValue:HP];
-        }
-        
-        
     }else{
-        _HP = 0;
         
-        [self boom];
+        if (_HP>0) {
+            [self boom];
+        }
+        _HP = 0;
     }
-    
-    
+    SKShapeNode * hpLine = (SKShapeNode *)[self childNodeWithName:@"hp"];
+    if (hpLine) {
+        [self drawPathRefWithNode:hpLine andValue:_HP];
+    }
     
 }
 
 -(void)boom
 {
+    
+    NSMutableArray * boomTextures = [NSMutableArray array];
+    for (int i = 1; i<10; i++) {
+        SKTexture * t = [SKTexture textureWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"boom_0%d",i]]];
+        [boomTextures addObject:t];
+    }
+    
+    SKAction * boomAction = [SKAction group:@[[SKAction playSoundFileNamed:@"boom.mp3" waitForCompletion:NO],
+                      [SKAction animateWithTextures:boomTextures timePerFrame:0.07]
+                                              ]];
     [self runAction:[SKAction sequence:@[
-                                         [SKAction runBlock:^{
-        <#code#>
-    }],
+                                         boomAction,
                                          [SKAction removeFromParent]
                                          ]]];
+    GCxt.score += 10;
 }
 
 
--(SKSpriteNode *)myBullet
+-(FWBullet *)myBullet
 {
-    NSString * bulletName = @"";
-    
-    CGFloat bullet_w = self.size.width/5;
-    CGFloat bullet_h = bullet_w;
-    
-    switch (self.planeLevel) {
-        case 1:
-            bulletName = @"bullet_1";
-            break;
-        case 2:
-            bulletName = @"bullet_2";
-            bullet_w = bullet_w*2;
-            break;
-        case 3:
-            bulletName = @"bullet_3";
-            bullet_w = bullet_w*3;
-            break;
-            
-        default:
-            break;
-    }
-    
-    
-    
-    SKSpriteNode * bullet = [SKSpriteNode spriteNodeWithImageNamed:bulletName];
-    bullet.size = CGSizeMake(bullet_w, bullet_h);
-    
-    SKPhysicsBody * physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:bullet.size];
-    physicsBody.dynamic = YES;
-    physicsBody.restitution = 1.0;
-    physicsBody.charge = 0.5;
-    physicsBody.mass = 100;
-    physicsBody.density = 100;
-    physicsBody.categoryBitMask = GamePhyBullet_Major;
-    physicsBody.collisionBitMask = GamePhyPlane_Enemy;
-    physicsBody.contactTestBitMask = GamePhyPlane_Enemy;
-    bullet.physicsBody = physicsBody;
-    
-    bullet.name = @"bullet";
-    
-    bullet.zPosition = GameLayerSprite;
-    
-    return bullet;
+    return [FWBullet bulletWithParentPlane:self];
 }
 @end
