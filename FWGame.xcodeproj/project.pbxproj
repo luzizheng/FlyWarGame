@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		093FCE66E9E2C7F9DA1BB523 /* libPods-FWGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139A9030AE8CE8E8C5A66A9F /* libPods-FWGame.a */; };
+		614CEAD71F6BC2B200BF5EF5 /* Bokeh.sks in Resources */ = {isa = PBXBuildFile; fileRef = 614CEAD61F6BC2A500BF5EF5 /* Bokeh.sks */; };
+		614CEADA1F6BD17700BF5EF5 /* FWProgressNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 614CEAD91F6BD17700BF5EF5 /* FWProgressNode.m */; };
+		614CEAE01F6BEBD500BF5EF5 /* SKNode+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 614CEADF1F6BEBD500BF5EF5 /* SKNode+Utils.m */; };
+		614CEAE31F6BEE7100BF5EF5 /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 614CEAE21F6BEE7100BF5EF5 /* UIColor+Utils.m */; };
+		616E20701F6A5D82008D78D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616E206E1F6A5D82008D78D6 /* Assets.xcassets */; };
+		616E20A21F6A84AC008D78D6 /* BallTrail2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 616E20A11F6A84A3008D78D6 /* BallTrail2.sks */; };
 		619D56841F69562A0028B580 /* FWBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 619D56831F69562A0028B580 /* FWBullet.m */; };
 		619D56861F695CE70028B580 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619D56851F695CE70028B580 /* AVFoundation.framework */; };
 		619D56891F695E8A0028B580 /* CornfieldChase.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619D56871F695D920028B580 /* CornfieldChase.mp3 */; };
@@ -30,10 +36,20 @@
 		61C54B6E1F67C31C00B2DBE0 /* spaceMap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 61C54B6C1F67C2C700B2DBE0 /* spaceMap.tmx */; };
 		61C54B701F67C37800B2DBE0 /* spaceMap.tsx in Resources */ = {isa = PBXBuildFile; fileRef = 61C54B6F1F67C36800B2DBE0 /* spaceMap.tsx */; };
 		61D640D01F67DC21003110AE /* SpaceBgNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D640CF1F67DC21003110AE /* SpaceBgNode.m */; };
+		61EF98991F6A1DBD00195BAA /* FWSoundBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EF98981F6A1DBD00195BAA /* FWSoundBox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		139A9030AE8CE8E8C5A66A9F /* libPods-FWGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FWGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		614CEAD61F6BC2A500BF5EF5 /* Bokeh.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bokeh.sks; sourceTree = "<group>"; };
+		614CEAD81F6BD17700BF5EF5 /* FWProgressNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWProgressNode.h; sourceTree = "<group>"; };
+		614CEAD91F6BD17700BF5EF5 /* FWProgressNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWProgressNode.m; sourceTree = "<group>"; };
+		614CEADE1F6BEBD500BF5EF5 /* SKNode+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKNode+Utils.h"; sourceTree = "<group>"; };
+		614CEADF1F6BEBD500BF5EF5 /* SKNode+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKNode+Utils.m"; sourceTree = "<group>"; };
+		614CEAE11F6BEE7100BF5EF5 /* UIColor+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utils.h"; sourceTree = "<group>"; };
+		614CEAE21F6BEE7100BF5EF5 /* UIColor+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utils.m"; sourceTree = "<group>"; };
+		616E206E1F6A5D82008D78D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		616E20A11F6A84A3008D78D6 /* BallTrail2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BallTrail2.sks; sourceTree = "<group>"; };
 		619D56821F69562A0028B580 /* FWBullet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWBullet.h; sourceTree = "<group>"; };
 		619D56831F69562A0028B580 /* FWBullet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWBullet.m; sourceTree = "<group>"; };
 		619D56851F695CE70028B580 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +84,8 @@
 		61C54B6F1F67C36800B2DBE0 /* spaceMap.tsx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = spaceMap.tsx; sourceTree = "<group>"; };
 		61D640CE1F67DC21003110AE /* SpaceBgNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceBgNode.h; sourceTree = "<group>"; };
 		61D640CF1F67DC21003110AE /* SpaceBgNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceBgNode.m; sourceTree = "<group>"; };
+		61EF98971F6A1DBD00195BAA /* FWSoundBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWSoundBox.h; sourceTree = "<group>"; };
+		61EF98981F6A1DBD00195BAA /* FWSoundBox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWSoundBox.m; sourceTree = "<group>"; };
 		9B5A40293B7B83C2E4B735AC /* Pods-FWGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FWGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FWGame/Pods-FWGame.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B6BD44DAD871C5F2B03252 /* Pods-FWGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FWGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-FWGame/Pods-FWGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,18 +115,22 @@
 		61B77D7B1F68D60E00EA3B51 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				61C1287B1F668DD800C58980 /* GameViewController.h */,
+				61C1287C1F668DD800C58980 /* GameViewController.m */,
 				61B77D781F68D4D000EA3B51 /* GameCxt.h */,
 				61B77D791F68D4D000EA3B51 /* GameCxt.m */,
 				61C128781F668DD800C58980 /* GameScene.h */,
 				61C128791F668DD800C58980 /* GameScene.m */,
+				614CEAD81F6BD17700BF5EF5 /* FWProgressNode.h */,
+				614CEAD91F6BD17700BF5EF5 /* FWProgressNode.m */,
 				61D640CE1F67DC21003110AE /* SpaceBgNode.h */,
 				61D640CF1F67DC21003110AE /* SpaceBgNode.m */,
-				61C1287B1F668DD800C58980 /* GameViewController.h */,
-				61C1287C1F668DD800C58980 /* GameViewController.m */,
 				61B77D7C1F68D66000EA3B51 /* FWPlane.h */,
 				61B77D7D1F68D66000EA3B51 /* FWPlane.m */,
 				619D56821F69562A0028B580 /* FWBullet.h */,
 				619D56831F69562A0028B580 /* FWBullet.m */,
+				61EF98971F6A1DBD00195BAA /* FWSoundBox.h */,
+				61EF98981F6A1DBD00195BAA /* FWSoundBox.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -154,6 +176,10 @@
 				61C128901F6691E500C58980 /* PrefixHeader.h */,
 				61C128711F668DD800C58980 /* AppDelegate.h */,
 				61C128721F668DD800C58980 /* AppDelegate.m */,
+				614CEADE1F6BEBD500BF5EF5 /* SKNode+Utils.h */,
+				614CEADF1F6BEBD500BF5EF5 /* SKNode+Utils.m */,
+				614CEAE11F6BEE7100BF5EF5 /* UIColor+Utils.h */,
+				614CEAE21F6BEE7100BF5EF5 /* UIColor+Utils.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -161,6 +187,8 @@
 		61C54B571F6696A100B2DBE0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				614CEAD61F6BC2A500BF5EF5 /* Bokeh.sks */,
+				616E20A11F6A84A3008D78D6 /* BallTrail2.sks */,
 				619D56901F6963D20028B580 /* fireBullet.wav */,
 				619D568E1F6962470028B580 /* boom.mp3 */,
 				619D568C1F69613F0028B580 /* ironman.mp3 */,
@@ -171,6 +199,7 @@
 				61C54B691F67B96400B2DBE0 /* bg.png */,
 				61C128741F668DD800C58980 /* GameScene.sks */,
 				61C128761F668DD800C58980 /* Actions.sks */,
+				616E206E1F6A5D82008D78D6 /* Assets.xcassets */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -245,10 +274,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				614CEAD71F6BC2B200BF5EF5 /* Bokeh.sks in Resources */,
+				616E20A21F6A84AC008D78D6 /* BallTrail2.sks in Resources */,
 				619D56911F6963E10028B580 /* fireBullet.wav in Resources */,
 				619D568F1F6962590028B580 /* boom.mp3 in Resources */,
 				619D568D1F69614E0028B580 /* ironman.mp3 in Resources */,
 				619D568B1F695FD70028B580 /* menu.mp3 in Resources */,
+				616E20701F6A5D82008D78D6 /* Assets.xcassets in Resources */,
 				619D56891F695E8A0028B580 /* CornfieldChase.mp3 in Resources */,
 				61C54B701F67C37800B2DBE0 /* spaceMap.tsx in Resources */,
 				61C54B6E1F67C31C00B2DBE0 /* spaceMap.tmx in Resources */,
@@ -317,11 +349,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D640D01F67DC21003110AE /* SpaceBgNode.m in Sources */,
+				614CEADA1F6BD17700BF5EF5 /* FWProgressNode.m in Sources */,
 				61C1287A1F668DD800C58980 /* GameScene.m in Sources */,
 				619D56841F69562A0028B580 /* FWBullet.m in Sources */,
+				61EF98991F6A1DBD00195BAA /* FWSoundBox.m in Sources */,
 				61C1287D1F668DD800C58980 /* GameViewController.m in Sources */,
 				61C128881F668DD800C58980 /* main.m in Sources */,
+				614CEAE31F6BEE7100BF5EF5 /* UIColor+Utils.m in Sources */,
 				61C128731F668DD800C58980 /* AppDelegate.m in Sources */,
+				614CEAE01F6BEBD500BF5EF5 /* SKNode+Utils.m in Sources */,
 				61B77D7E1F68D66000EA3B51 /* FWPlane.m in Sources */,
 				61B77D7A1F68D4D000EA3B51 /* GameCxt.m in Sources */,
 			);

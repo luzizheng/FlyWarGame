@@ -14,7 +14,10 @@
 
 @property(nonatomic,assign)GameStatus gameStatus;
 
-@property(nonatomic,assign)NSInteger score;
+
+@property(nonatomic,copy)void(^expAddingStepHandler)(GameCxt * cxt,CGFloat exp);
+
+-(void)addExp:(CGFloat)exp;
 
 @end
 

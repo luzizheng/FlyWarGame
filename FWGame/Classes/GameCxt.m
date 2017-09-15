@@ -18,4 +18,14 @@ static GameCxt *sharedInstance = nil;
     });
     return sharedInstance;
 }
+
+-(void)addExp:(CGFloat)exp
+{
+    
+    if (self.expAddingStepHandler) {
+        self.expAddingStepHandler(self,exp);
+    }
+    
+    
+}
 @end

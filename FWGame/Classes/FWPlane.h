@@ -20,9 +20,15 @@
 
 -(instancetype)initWithImageNamed:(NSString *)name isMajorPlane:(BOOL)isMajorPlane;
 
--(FWBullet *)myBullet;
 
 -(void)hitByAttack:(NSInteger)attackValue;
+
+@property(nonatomic,readonly)NSTimeInterval bulletRate;
+-(void)fireBullet;
+
+-(void)stopFireBullet;
+
+-(void)enemyFlyDown;
 
 
 @end

@@ -22,10 +22,14 @@ typedef enum : NSUInteger {
 
 // physical layer
 typedef enum : uint32_t {
-    GamePhyPlane_Major,
-    GamePhyBullet_Major,
-    GamePhyPlane_Enemy,
-    GamePhyBullet_Enemy,
+    GamePhyNull = 0x00000000,
+    GamePhyPlane_Major = 0x1 << 1,
+    GamePhyBullet_Major = 0x1 << 2,
+    GamePhyPlane_Enemy = 0x1 << 3,
+    GamePhyBullet_Enemy = 0x1 << 4,
+    GamePhyFireFlame = 0x1 << 5,
+    GamePhyEdge = 0x1 << 6,
+    GamePhyAll = 0xFFFFFFFF,
 } GamePhy;
 
 #define GameLayerBG -1.0
@@ -45,12 +49,11 @@ typedef enum : uint32_t {
 #define FWEnemyPlaneSpeed 220.0
 
 // 子弹飞行速度
-#define FWBulletFlySpeed 500.0
+#define FWBulletFlySpeed 800.0
 
 // 主角飞机生命值
 #define FWPlaneHP_Major 1000
 
 // 敌机生命值
-#define FWPlaneHP_Enemy 200
-
+#define FWPlaneHP_Enemy 500
 
