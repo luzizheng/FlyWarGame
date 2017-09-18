@@ -10,4 +10,8 @@
 
 @interface SKNode (Utils)
 -(void)shakeWithTimes:(NSInteger)times;
+
+
+-(void)dropOutInfo:(NSString *)text andColor:(UIColor *)color andFontSize:(CGFloat)fontSize;
+
 @end

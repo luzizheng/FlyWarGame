@@ -12,6 +12,22 @@
 
 @implementation FWPlane
 
+
++(instancetype)createEnemyPlane
+{
+    NSString * imageName = [SourceTool enemyImageNameByRandomWithGameLevel:GCxt.gameLevel];
+    if (imageName) {
+        if ([UIImage imageNamed:imageName]) {
+            return [[FWPlane alloc] initWithImageNamed:imageName isMajorPlane:NO];
+        }else{
+            return nil;
+        }
+    }else{
+        return nil;
+    }
+    
+}
+
 -(instancetype)initWithImageNamed:(NSString *)name isMajorPlane:(BOOL)isMajorPlane
 {
     if (self = [super initWithTexture:[SKTexture textureWithImageNamed:name]]) {
@@ -134,6 +150,7 @@
                                          [SKAction removeFromParent]
                                          ]]];
     [GCxt addExp:10.0];
+    GCxt.gameScore += 10;
 }
 
 

@@ -17,7 +17,25 @@
 
 @property(nonatomic,copy)void(^expAddingStepHandler)(GameCxt * cxt,CGFloat exp);
 
+/**
+ *  start with 0;
+ */
+@property(nonatomic,assign)NSInteger gameScore;
+/**
+ *  base on game score (Start with 1)
+ */
+@property(nonatomic,readonly)NSInteger gameLevel;
+
+
+@property(nonatomic,readonly)NSInteger historyScore;
+
+@property(nonatomic,assign)BOOL hasBrokenRecord;
+
+
 -(void)addExp:(CGFloat)exp;
+
+
+-(void)clearCxt;
 
 @end
 

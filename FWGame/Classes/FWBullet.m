@@ -21,53 +21,21 @@
 +(instancetype)bulletWithParentPlane:(__kindof SKSpriteNode *)plane;
 {
     CGFloat bullet_w = plane.size.width/5;
-    NSInteger attack = 0;
-    CGFloat speed = 0;
+    
     
 
     
-    UIColor * defaultColor = [UIColor colorWithRed:0.99 green:0.64 blue:0.18 alpha:1.0];
-    UIColor * maxColor = [UIColor cyanColor];
-    
-    NSInteger count = 10;
-    
-    NSArray * colors = [UIColor colorArrayByStartColor:defaultColor andEndColor:maxColor andArrayCount:count];
+    UIColor * defaultColor = [UIColor cyanColor];
+    UIColor * maxColor = [UIColor redColor];
     
     NSInteger level = ((FWPlane *)plane).planeLevel;
     
-    UIColor * color = nil;
-    if (colors.count > 0 && level<=count) {
-        color = colors[level-1];
-    }else if(colors.count<=0){
-        color = defaultColor;
-    }else if (level>count){
-        color = maxColor;
-    }else{
-        color = defaultColor;
-    }
-    
-    
-    switch (level) {
-        case 1:
-            attack = 50;
-            speed = FWBulletFlySpeed;
-            
-            break;
-        case 2:
-            attack = 100;
-            speed = FWBulletFlySpeed+100.0;
-            break;
-        case 3:
-            attack = 200;
-            speed = FWBulletFlySpeed+100.0;
-            break;
+    UIColor * color = [UIColor getColorByGradientStartColor:defaultColor andEndColor:maxColor andGradientLevel:(CGFloat)level/5.0];
 
-        default:
-            attack = ((FWPlane *)plane).planeLevel * 100;
-            speed = FWBulletFlySpeed+100.0;
-            break;
-    }
     
+    NSInteger attack = 50 + (level-1)*20;
+    CGFloat speed = FWBulletFlySpeed + (level-1);
+
     
 
     FWBullet * bullet = [[FWBullet alloc] initWithImageNamed:@"ball" andAttack:attack andSpeed:speed];

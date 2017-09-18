@@ -10,6 +10,14 @@
 
 @interface UIColor (Utils)
 
-+(NSArray *)colorArrayByStartColor:(UIColor *)startColor andEndColor:(UIColor *)endColor andArrayCount:(NSInteger)arrayCount;
+/**
+ 线性色值
+ 
+ @param startColor 起始颜色
+ @param endColor 结尾颜色
+ @param gradientLevel 取色级别 (0.0 - 1.0)
+ @return 颜色
+ */
++(UIColor *)getColorByGradientStartColor:(UIColor *)startColor andEndColor:(UIColor *)endColor andGradientLevel:(CGFloat)gradientLevel;
 
 @end

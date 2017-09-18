@@ -13,12 +13,15 @@
 #import "FWBullet.h"
 #import "FWProgressNode.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "AGSpriteButton.h"
 
 @interface GameScene()<SKPhysicsContactDelegate>
 @property(nonatomic,strong)FWPlane * myPlane;
 @property(nonatomic,strong)SpaceBgNode * spaceBackground;
 @property(nonatomic,strong)FWProgressNode * hpProgress;
 @property(nonatomic,strong)FWProgressNode * exProgress;
+@property(nonatomic,strong)SKLabelNode * levelLabel;
+@property(nonatomic,strong)SKLabelNode * scoreLabel;
 @end
 
 @implementation GameScene {
@@ -41,9 +44,7 @@
     _lastUpdateTime = 0;
     
     // Get label node from scene and store it for use later
-    SKLabelNode * labelNode = [SKLabelNode labelNodeWithText:@"打飞机"];
-    labelNode.fontSize = 80;
-    labelNode.fontColor = [UIColor whiteColor];
+    SKLabelNode * labelNode = [self createLabelWithText:@"Fly War" andTextSize:80 andTextColor:[UIColor whiteColor]];
     labelNode.position = CGPointMake(self.size.width/2, self.size.height/2);
     labelNode.zPosition = GameLayerUI;
     labelNode.alpha = 0.0;
@@ -52,7 +53,7 @@
     
     _label = labelNode;
 
-    [FWSB playBGM:@"menu"];
+    [FWSB playBGM:@"LoneSurvivor"];
     
     [self addEmitterNode];
     
@@ -81,6 +82,8 @@
             strongSelf.exProgress.progress = 0;
             [strongSelf showLevelUpTips];
             strongSelf.myPlane.HP = FWPlaneHP_Major;
+            strongSelf.levelLabel.text = [NSString stringWithFormat:@"Lv:%ld",(long)strongSelf.myPlane.planeLevel];
+            [strongSelf.levelLabel runAction:[SKAction sequence:@[[SKAction scaleXTo:5.0 y:5.0 duration:0.25],[SKAction scaleXTo:1.0 y:1.0 duration:0.25]]]];
         }else{
             
             strongSelf.exProgress.progress = latestExp/nextLevelNeedExp;
@@ -187,6 +190,47 @@
 }
 
 
+-(void)showGameOverLabel
+{
+    GCxt.gameStatus = GameStatusOver;
+    SKLabelNode * gameOverLabel = [self createLabelWithText:@"Game Over" andTextSize:80 andTextColor:[UIColor whiteColor]];
+    gameOverLabel.position = CGPointMake(self.size.width/2, self.size.height/2 + 40);
+    gameOverLabel.name = @"gameOverLabel";
+    
+    
+    SKLabelNode * score = [self createLabelWithText:[NSString stringWithFormat:@"Your Score:%ld History:%ld",(long)GCxt.gameScore,(long)GCxt.historyScore] andTextSize:30 andTextColor:[UIColor whiteColor]];
+    score.position = CGPointMake(self.size.width/2, gameOverLabel.position.y - gameOverLabel.fontSize/2 - 20);;
+    score.name = @"scoreReport";
+
+    
+    AGSpriteButton * restartLabel = [AGSpriteButton buttonWithColor:[UIColor clearColor] andSize:CGSizeMake(100, 40)];
+    [restartLabel setLabelWithText:@"Exit" andFont:[UIFont fontWithName:FWDefFontName size:30] withColor:[UIColor whiteColor]];
+    restartLabel.position = CGPointMake(self.size.width/2, gameOverLabel.position.y - gameOverLabel.fontSize/2 - 80);
+    restartLabel.name = @"restartLabel";
+    
+    __weak typeof(restartLabel)weakNode = restartLabel;
+    [restartLabel performAction:[SKAction sequence:@[[SKAction scaleXTo:3.0 y:3.0 duration:0.1],[SKAction scaleXTo:1.0 y:1.0 duration:0.1]]] onNode:weakNode withEvent:AGButtonControlEventTouchDown];
+    
+    __weak typeof(self)weakSelf = self;
+    [restartLabel performBlock:^{
+        
+        [GCxt clearCxt];
+        
+        __strong typeof(weakSelf)strongSelf = weakSelf;
+        GameScene * gs = [GameScene sceneWithSize:CGSizeMake(750, 1334)];
+        [strongSelf.view presentScene:gs];
+        
+    } onEvent:AGButtonControlEventTouchUpInside];
+    
+    [self addChild:score];
+    [self addChild:gameOverLabel];
+    [self addChild:restartLabel];
+    
+    
+    
+}
+
+
 // start game
 -(void)startGame
 {
@@ -217,6 +261,15 @@
     expLabel.position = CGPointMake(self.exProgress.position.x - self.exProgress.size.width/2- 30, self.exProgress.position.y -5);
     [self addChild:expLabel];
     
+    
+    self.scoreLabel.position = CGPointMake(30, self.size.height-40);
+    [self addChild:self.scoreLabel];
+    
+    
+    self.levelLabel.position = CGPointMake(hpLabel.position.x, hpLabel.position.y+25);
+    self.levelLabel.text = [NSString stringWithFormat:@"Lv:%ld",(long)self.myPlane.planeLevel];
+    [self addChild:self.levelLabel];
+    
 }
 
 
@@ -225,20 +278,28 @@
 {
     return [SKAction runBlock:^{
         FWPlane * plane = [self createEnemyPlane];
-        [self addChild:plane];
-        [plane enemyFlyDown];
+        if (plane) {
+            [self addChild:plane];
+            [plane enemyFlyDown];
+        }
+        
     }];
 }
 
 // create an enemy plane node
 -(FWPlane *)createEnemyPlane
 {
-    FWPlane * plane = [[FWPlane alloc] initWithImageNamed:@"enem_1" isMajorPlane:NO];
-    plane.HP = FWPlaneHP_Enemy;
-    CGFloat xPosition = arc4random()&((int)(self.size.width-plane.size.width));
-    xPosition += plane.size.width/2;
-    plane.position = CGPointMake(xPosition, self.size.height+20);
-    return plane;
+    FWPlane * plane = [FWPlane createEnemyPlane];
+    if (plane) {
+        plane.HP = FWPlaneHP_Enemy;
+        CGFloat xPosition = arc4random()&((int)(self.size.width-plane.size.width));
+        xPosition += plane.size.width/2;
+        plane.position = CGPointMake(xPosition, self.size.height+20);
+        return plane;
+    }else{
+        return nil;
+    }
+    
 }
 
 
@@ -256,8 +317,6 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
-//    self.scoreLabel.text = [NSString stringWithFormat:@"%ld",(long)GCxt.score];
-    
     
 
     // Initialize _lastUpdateTime if it has not already been
@@ -273,10 +332,13 @@
     
     switch (GCxt.gameStatus) {
         case GameStatusRunning:
+            self.scoreLabel.text = [NSString stringWithFormat:@"%ld",(long)GCxt.gameScore];
             [self configMyPlaneHpValue];
             [self checkRemoveNode];
             break;
-            
+        case GameStatusOver:
+            [self checkRemoveNode];
+            break;
         default:
             break;
     }
@@ -314,10 +376,7 @@
 
 -(void)showLevelUpTips
 {
-    SKLabelNode * label = [SKLabelNode labelNodeWithText:@"Level Up!!!"];
-    label.fontColor = [UIColor yellowColor];
-    label.fontSize = 100;
-    label.zPosition = GameLayerUI;
+    SKLabelNode * label = [self createLabelWithText:@"Level Up!!!" andTextSize:80 andTextColor:[UIColor yellowColor]];
     label.position = CGPointMake(self.size.width/2, self.size.height/2 - 100);
     label.alpha = 0.0;
     [self addChild:label];
@@ -339,11 +398,11 @@
 {
     if (contact.bodyA.categoryBitMask+contact.bodyB.categoryBitMask == GamePhyPlane_Major+GamePhyBullet_Major) {
         // my plane hit by my bullet
-        [self myPlaneHit];
+        [self myPlaneHitBy:contact.bodyA.categoryBitMask == GamePhyPlane_Major?contact.bodyB.node:contact.bodyA.node];
     }
     if (contact.bodyA.categoryBitMask+contact.bodyB.categoryBitMask == GamePhyPlane_Major+GamePhyPlane_Enemy) {
         // my plane hit by enemy plane
-        [self myPlaneHit];
+        [self myPlaneHitBy:contact.bodyA.categoryBitMask == GamePhyPlane_Major?contact.bodyB.node:contact.bodyA.node];
     }
     
     if (contact.bodyA.categoryBitMask == GamePhyBullet_Major && contact.bodyB.categoryBitMask == GamePhyPlane_Enemy) {
@@ -362,24 +421,36 @@
     if ([enemyPlane isKindOfClass:[FWPlane class]] && [bullet isKindOfClass:[SKSpriteNode class]]) {
         
         FWPlane * enemy = (FWPlane *)enemyPlane;
+        FWBullet * b = (FWBullet *)bullet;
         
         if (enemy.HP>0) {
-            [enemy hitByAttack:((FWBullet *)bullet).attack];
-//            [bullet runAction:[SKAction sequence:@[[SKAction fadeInWithDuration:0.2],
-//                                                   [SKAction removeFromParent]
-//                                                   ]]];
+            
+            BOOL criticalAttack = arc4random()%10<2?YES:NO; // 暴击
+            NSInteger attack = criticalAttack?b.attack*2:b.attack;
+            [enemy hitByAttack:attack];
+            [enemy dropOutInfo:[NSString stringWithFormat:@"-%ld",attack] andColor:[UIColor redColor] andFontSize:criticalAttack?60:30];
+            
         }
-        
+         
         
     }
 }
 
--(void)myPlaneHit
+-(void)myPlaneHitBy:(__kindof SKNode *)node;
 {
-    [self.myPlane hitByAttack:50];
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    NSInteger attack = 50;
+    if ([node isKindOfClass:[FWBullet class]]) {
+        attack = [(FWBullet *)node attack];
+    }
     
-    [self.hpProgress shakeWithTimes:10];
+    if (self.myPlane.HP <= attack) {
+        [self showGameOverLabel];
+    }
+    
+    [self.myPlane hitByAttack:attack];
+    
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    [self.myPlane dropOutInfo:[NSString stringWithFormat:@"-%ld",(long)attack] andColor:[UIColor redColor] andFontSize:30];
 }
 
 
@@ -451,7 +522,24 @@
     SKLabelNode * node = [SKLabelNode labelNodeWithText:text];
     node.fontSize = textSize;
     node.fontColor = color;
+    node.fontName = FWDefFontName;
+    node.zPosition = GameLayerUI;
     return node;
 }
 
+-(SKLabelNode *)levelLabel
+{
+    if (!_levelLabel) {
+        _levelLabel = [self createLabelWithText:@"Lv:" andTextSize:25 andTextColor:[UIColor whiteColor]];
+    }
+    return _levelLabel;
+}
+-(SKLabelNode *)scoreLabel
+{
+    if (!_scoreLabel) {
+        _scoreLabel = [self createLabelWithText:@"0" andTextSize:28 andTextColor:[UIColor whiteColor]];
+        _scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+    }
+    return _scoreLabel;
+}
 @end

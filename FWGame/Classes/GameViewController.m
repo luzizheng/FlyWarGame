@@ -13,7 +13,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
     // including entities and graphs.
     GameScene *sceneNode = [GameScene sceneWithSize:[self getDisplaySize]];
@@ -26,9 +25,11 @@
     // Present the scene
     [skView presentScene:sceneNode];
     
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
 }
+
+
 
 -(CGSize)getDisplaySize
 {

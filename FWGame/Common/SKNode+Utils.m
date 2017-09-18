@@ -31,4 +31,21 @@
     }];
     
 }
+
+
+-(void)dropOutInfo:(NSString *)text andColor:(UIColor *)color andFontSize:(CGFloat)fontSize
+{
+    SKLabelNode * node = [SKLabelNode labelNodeWithText:text];
+    node.fontSize = fontSize;
+    node.fontColor = color;
+    node.fontName = FWDefFontName;
+    node.position = CGPointMake(self.position.x + 20, self.position.y+20);
+    [self.parent addChild:node];
+    [node runAction:[SKAction group:@[
+                                      [SKAction moveBy:CGVectorMake(60.0, 60.0) duration:0.5],
+                                      [SKAction fadeOutWithDuration:0.5]
+                                      ]] withKey:@"infoDropOut"];
+}
+
+
 @end

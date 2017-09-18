@@ -17,13 +17,18 @@
 @property(nonatomic,assign)NSUInteger planeLevel;
 
 @property(nonatomic,assign)NSInteger HP;
+@property(nonatomic,readonly)NSTimeInterval bulletRate;
+
+
 
 -(instancetype)initWithImageNamed:(NSString *)name isMajorPlane:(BOOL)isMajorPlane;
 
 
++(instancetype)createEnemyPlane;
+
 -(void)hitByAttack:(NSInteger)attackValue;
 
-@property(nonatomic,readonly)NSTimeInterval bulletRate;
+
 -(void)fireBullet;
 
 -(void)stopFireBullet;

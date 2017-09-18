@@ -36,6 +36,8 @@ typedef enum : uint32_t {
 #define GameLayerSprite 0.0
 #define GameLayerUI 1.0
 
+#define FWDefFontName @"GillSans-UltraBold"
+
 
 #define FWGameStartPoint CGPointMake(self.size.width/2, self.size.height*0.2)
 

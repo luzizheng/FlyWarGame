@@ -16,3 +16,4 @@
 
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
+#define KIntegerToString(_intergerValue_) [NSString stringWithFormat:@"%ld",_intergerValue_]
